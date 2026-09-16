@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ── */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply font-outfit text-[#1a1a2e] bg-white antialiased overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  p, li, input, textarea, select { @apply font-inter; }
+  ::selection { background: #c9a84c40; color: #0d0d1a; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0d0d1a; }
+  ::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+}
+
+/* ── Gradient helpers ── */
+.gold-gradient       { background: linear-gradient(135deg,#c9a84c,#e8c97b); }
+.gold-gradient-text  {
+  background: linear-gradient(135deg,#c9a84c,#e8c97b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark-gradient  { background: linear-gradient(135deg,#0d0d1a 0%,#13132a 50%,#1a1a38 100%); }
+.hero-glow      { background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(201,168,76,.10) 0%, transparent 70%); }
+
+/* ── Shimmer overlay on hero image ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(201,168,76,.08) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3.5s ease-in-out infinite;
+}
+
+/* ── Grain texture overlay ── */
+@keyframes grain {
+  0%,100% { transform: translate(0,0); }
+  10%      { transform: translate(-1%,-1%); }
+  30%      { transform: translate(1%,1%); }
+  50%      { transform: translate(-1%,1%); }
+  70%      { transform: translate(1%,-1%); }
+  90%      { transform: translate(-1%,0%); }
+}
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  opacity: .025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  animation: grain 6s steps(1) infinite;
+  pointer-events: none;
+}
+
+/* ── Gold pulse dot ── */
+@keyframes gold-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,.5); }
+  70%      { box-shadow: 0 0 0 10px rgba(201,168,76,0); }
+}
+.gold-pulse { animation: gold-pulse 2s ease-in-out infinite; }
+
+/* ── Float animation ── */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+.animate-float { animation: float 5s ease-in-out infinite; }
+
+/* ── Image card overlay hover ── */
+.img-card { position: relative; overflow: hidden; }
+.img-card img { transition: transform .6s cubic-bezier(.25,.46,.45,.94); }
+.img-card:hover img { transform: scale(1.06); }
+.img-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,13,26,.75) 0%, transparent 55%);
+  transition: opacity .3s ease;
+}
+
+/* ── Section divider wave ── */
+.wave-divider svg { display: block; }
+
+/* ── Form field ── */
+.field {
+  @apply w-full px-4 py-3 rounded-xl text-sm outline-none border transition-all duration-200;
+}
+.field-dark {
+  @apply bg-white/5 border-white/10 text-white focus:border-gold focus:bg-white/10;
+}
+.field-light {
+  @apply bg-gray-50 border-gray-200 text-dark focus:border-gold focus:bg-white;
+}
+.field-dark::placeholder { color: rgba(255,255,255,.35); }
+.field-light::placeholder { @apply text-gray-400; }
