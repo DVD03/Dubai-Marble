@@ -37,30 +37,30 @@ export default function BlogPage() {
         image={imgs.blogHero}
       />
 
-      <section className="py-24 bg-[#f8f7f4]">
+      <section className="py-24 bg-[#f0ede8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-14">
             <SectionLabel>Latest Articles</SectionLabel>
-            <h2 className="text-3xl font-black text-dark">Professional Stone Care Insights</h2>
+            <h2 className="text-3xl font-black text-[#2c2a27]">Professional Stone Care Insights</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {articles.map((a, i) => (
               <AnimatedSection key={a.title} delay={i * 0.1}>
-                <div className="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1.5 flex flex-col h-full">
+                <div className="group bg-[#fafaf8] rounded-2xl overflow-hidden border border-[#e4e0da] shadow-sm hover:shadow-xl transition-all hover:-translate-y-1.5 flex flex-col h-full">
                   <div className="img-card aspect-[16/10] relative">
                     <Image src={a.src} alt={a.title} fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" />
                     <div className="img-card-overlay" />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <div className="flex items-center gap-4 text-[11px] text-gray-400 mb-3">
+                    <div className="flex items-center gap-4 text-[11px] text-[#a89f95] mb-3">
                       <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-gold" /> {a.date}</span>
                       <span className="flex items-center gap-1.5"><User className="w-3.5 h-3.5 text-gold" /> {a.author}</span>
                     </div>
-                    <h2 className="font-bold text-dark text-base mb-3 leading-snug group-hover:text-gold transition-colors">
+                    <h2 className="font-bold text-[#2c2a27] text-base mb-3 leading-snug group-hover:text-gold transition-colors">
                       {a.title}
                     </h2>
-                    <p className="text-xs text-gray-500 leading-relaxed mb-5 flex-grow">{a.excerpt}</p>
+                    <p className="text-xs text-[#8a8278] leading-relaxed mb-5 flex-grow">{a.excerpt}</p>
                     <button
                       onClick={() => alert("Full article coming soon in our newsletter!")}
                       className="text-xs font-bold text-gold flex items-center gap-1.5 hover:gap-3 transition-all mt-auto"

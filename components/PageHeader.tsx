@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import SectionDivider from "@/components/SectionDivider";
+
 interface PageHeaderProps {
   breadcrumb: string;
   title: string;
@@ -20,7 +22,7 @@ export default function PageHeader({
   image,
 }: PageHeaderProps) {
   return (
-    <div className="relative py-16 sm:py-24 md:py-28 bg-[#0d0d1a] text-white overflow-hidden border-b border-gold/20 shadow-2xl">
+    <div className="relative py-16 sm:py-24 md:py-28 bg-[#0d0d1a] text-white overflow-hidden shadow-xl">
       <div className="absolute inset-0 z-0">
         <Image
           src={image}
@@ -31,18 +33,17 @@ export default function PageHeader({
           className="object-cover object-center opacity-35"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d1a] via-[#0d0d1a]/85 to-[#0d0d1a]/60" />
-        <div className="absolute inset-0 shimmer opacity-25" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pb-2">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
         >
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-gold/15 border border-gold/30 text-gold text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold gold-pulse" />
-            <Link href="/" className="hover:underline text-gold">Home</Link>
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+            <Link href="/" className="hover:underline text-amber-400">Home</Link>
             <span>&bull;</span>
             <span className="text-white/80">{breadcrumb}</span>
           </div>
@@ -65,7 +66,7 @@ export default function PageHeader({
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 inset-x-0 h-1 gold-gradient opacity-40" />
+      <SectionDivider type="peak-down" color="#f7f5f2" position="bottom" height={32} />
     </div>
   );
 }

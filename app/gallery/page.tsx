@@ -16,7 +16,7 @@ export default function GalleryPage() {
         image={imgs.galleryHero}
       />
 
-      <section className="py-20 bg-white border-b border-gray-200">
+      <section className="py-20 bg-[#fafaf8] border-b border-[#e4e0da]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <BeforeAfterSlider
             beforeImage={imgs.svcStain}
@@ -29,11 +29,11 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#f8f7f4]">
+      <section className="py-24 bg-[#f0ede8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
             <SectionLabel>Portfolio</SectionLabel>
-            <h2 className="text-3xl font-black text-dark">Completed Dubai Projects</h2>
+            <h2 className="text-3xl font-black text-[#2c2a27]">Completed Dubai Projects</h2>
           </AnimatedSection>
           <GalleryView />
         </div>

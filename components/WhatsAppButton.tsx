@@ -36,16 +36,15 @@ export default function WhatsAppButton() {
         )}
       </AnimatePresence>
 
-      {/* Pulse ring */}
+      {/* Clean WhatsApp Button */}
       <div className="relative">
-        <span className="absolute inset-0 rounded-full bg-[#25d366] animate-ping opacity-30" />
         <a
           href="https://api.whatsapp.com/send?phone=971508164087&text=Hi%2C%20I%20need%20marble%20polishing%20in%20Dubai."
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
           onClick={() => setShow(false)}
-          className="relative w-14 h-14 bg-gradient-to-br from-[#25d366] to-[#128c7e] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-transform"
+          className="relative w-13 h-13 sm:w-14 sm:h-14 bg-[#25d366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-105 active:scale-95"
         >
           {/* WhatsApp SVG icon */}
           <svg viewBox="0 0 24 24" className="w-7 h-7 fill-white">

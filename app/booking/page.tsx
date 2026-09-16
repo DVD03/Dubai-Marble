@@ -16,7 +16,7 @@ export default function BookingPage() {
         image={imgs.bookingHero}
       />
 
-      <section className="py-24 bg-[#f8f7f4]">
+      <section className="py-24 bg-[#f0ede8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Top 3 Trust Badges */}
@@ -27,10 +27,10 @@ export default function BookingPage() {
               { icon: <MapPin className="w-6 h-6 text-gold mx-auto mb-1.5" />,       label: "All Dubai",  sub: "Mobile dispatch" },
             ].map(({ icon, label, sub }) => (
               <AnimatedSection key={label}>
-                <div className="bg-white text-center p-5 rounded-2xl border border-gray-200 shadow-sm">
+                <div className="bg-[#fafaf8] text-center p-5 rounded-2xl border border-[#e4e0da] shadow-sm">
                   {icon}
-                  <div className="font-bold text-dark text-sm">{label}</div>
-                  <div className="text-xs text-gray-500 mt-0.5">{sub}</div>
+                  <div className="font-bold text-[#2c2a27] text-sm">{label}</div>
+                  <div className="text-xs text-[#8a8278] mt-0.5">{sub}</div>
                 </div>
               </AnimatedSection>
             ))}

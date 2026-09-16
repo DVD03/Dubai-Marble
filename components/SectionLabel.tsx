@@ -1,15 +1,58 @@
 import React from "react";
 
-export default function SectionLabel({ children, arabic }: { children: React.ReactNode; arabic?: string }) {
+export default function SectionLabel({
+  children,
+  arabic,
+  className = "",
+  isDark = false,
+  variant = "badge",
+}: {
+  children: React.ReactNode;
+  arabic?: string;
+  className?: string;
+  isDark?: boolean;
+  variant?: "badge" | "minimal";
+}) {
+  if (variant === "minimal") {
+    return (
+      <div className={`inline-flex items-center gap-2 mb-3 ${className}`}>
+        <span className="w-2.5 h-2.5 bg-[#ea580c] inline-block shrink-0 rounded-[1px]" />
+        <span
+          className={`font-black uppercase tracking-wider text-xs sm:text-sm ${
+            isDark ? "text-white" : "text-[#1e3a5f]"
+          }`}
+        >
+          {children}
+        </span>
+        {arabic && (
+          <span
+            className={`font-arabic text-xs font-semibold normal-case ${
+              isDark ? "text-amber-400" : "text-[#ea580c]"
+            }`}
+          >
+            · {arabic}
+          </span>
+        )}
+      </div>
+    );
+  }
+
   return (
-    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-gold/25 text-gold text-[11.5px] font-bold uppercase tracking-wider mb-3 shadow-sm">
-      <span className="w-2 h-2 rounded-full brand-gradient inline-block shadow-[0_0_6px_rgba(245,158,11,0.8)]" />
-      <span>{children}</span>
+    <div
+      className={`inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-md border text-[11px] sm:text-[12px] font-extrabold uppercase tracking-wider mb-4 shadow-sm transition-all ${
+        isDark
+          ? "bg-[#2c2a27]/90 border-slate-700 text-[#d9d2ca]"
+          : "bg-[#ede9e3] border-[#d6cfc5] text-[#1e3a5f]"
+      } ${className}`}
+    >
+      <span className="w-2.5 h-2.5 bg-[#ea580c] inline-block shrink-0 rounded-[1px]" />
+      <span className="tracking-wider">{children}</span>
       {arabic && (
-        <span className="font-arabic text-[12px] text-gold normal-case border-l border-white/15 pl-2">
+        <span className="font-arabic text-[11.5px] font-semibold normal-case border-l border-[#d6cfc5] pl-2 text-[#8a6c3e]">
           {arabic}
         </span>
       )}
     </div>
   );
 }
+

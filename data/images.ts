@@ -38,4 +38,8 @@ export const imgs = {
   blog1:         U("1615529182904-14819c35db37", 800, 75),  // Desert dust & marble
   blog2:         U("1556911220-e15b29be8c8f", 800, 75),     // Cleaning products
   blog3:         U("1558618666-fcd25c85cd64", 800, 75),     // Grinding vs crystallization
+
+  // Live Visual Proof Slider Images
+  sliderBefore:  U("1615529182904-14819c35db37", 1400, 85), // dull scratched unpolished marble surface
+  sliderAfter:   U("1618221195710-dd6b41faaea6", 1400, 85), // high-gloss 5-star mirror polished marble floor
 };

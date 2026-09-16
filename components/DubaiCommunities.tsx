@@ -27,7 +27,7 @@ export default function DubaiCommunities() {
           <p className="text-gray-300 text-base mb-1">
             Our mobile master stone care technicians are stationed across key Dubai zones for same-day free inspections.
           </p>
-          <p className="text-gray-400 text-xs sm:text-sm font-arabic">
+          <p className="text-[#a89f95] text-xs sm:text-sm font-arabic">
             فرقنا الفنية المتنقلة متواجدة في كافة مناطق دبي لتقديم المعاينة الفورية المجانية في نفس اليوم.
           </p>
         </AnimatedSection>
@@ -50,7 +50,7 @@ export default function DubaiCommunities() {
                 <div className="text-xs text-gold font-arabic mb-2">
                   {c.ar}
                 </div>
-                <p className="text-xs text-gray-400 font-medium">
+                <p className="text-xs text-[#a89f95] font-medium">
                   {c.tag}
                 </p>
               </div>
@@ -63,12 +63,12 @@ export default function DubaiCommunities() {
             <ShieldCheck className="w-8 h-8 text-gold shrink-0" />
             <div>
               <div className="font-bold text-white text-sm">Don't see your community listed? <span className="font-arabic font-normal text-xs text-gold">· نغطي كافة المناطق</span></div>
-              <div className="text-xs text-gray-400">We cover 100% of Dubai, Sharjah &amp; Abu Dhabi on request.</div>
+              <div className="text-xs text-[#a89f95]">We cover 100% of Dubai, Sharjah &amp; Abu Dhabi on request.</div>
             </div>
           </div>
           <a
             href="tel:+971508164087"
-            className="brand-gradient text-white font-extrabold text-xs px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-all shrink-0"
+            className="bg-[#4a6fa5] hover:bg-[#3b5a8a] text-white font-bold text-xs px-6 py-3 rounded-lg shadow-sm transition-colors shrink-0"
           >
             Call Dispatch: +971 50 816 4087
           </a>

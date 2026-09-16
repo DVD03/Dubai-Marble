@@ -19,17 +19,17 @@ export default function ContactPage() {
         image={imgs.contactHero}
       />
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#fafaf8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-16">
 
           {/* INFO */}
           <AnimatedSection direction="left" className="lg:col-span-5">
             <SectionLabel arabic="معلومات التواصل">Direct Contact</SectionLabel>
-            <h2 className="text-3xl font-black text-dark mb-2">We Are Here to Help</h2>
+            <h2 className="text-3xl font-black text-[#2c2a27] mb-2">We Are Here to Help</h2>
             <div className="text-gold font-bold font-arabic text-sm mb-4">
               فريق خدمة عملاء دبي في خدمتكم على مدار الساعة
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed mb-8">
+            <p className="text-[#6b6560] text-sm leading-relaxed mb-8">
               Reach out via phone, email, or WhatsApp. Our Dubai customer service team responds within 30 minutes.
             </p>
 
@@ -41,16 +41,16 @@ export default function ContactPage() {
                 { icon: <Clock className="w-5 h-5 text-gold" />,   label: "Working Hours",    ar: "ساعات العمل",     value: "Mon – Sun: 9:00 AM – 6:00 PM", href: null },
               ].map(({ icon, label, ar, value, href }) => (
                 <div key={label} className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white border border-gold/25 flex items-center justify-center shrink-0 shadow-sm">{icon}</div>
+                  <div className="w-12 h-12 rounded-xl bg-[#fafaf8] border border-gold/25 flex items-center justify-center shrink-0 shadow-sm">{icon}</div>
                   <div>
                     <div className="text-[11px] font-bold text-gold uppercase tracking-wider mb-0.5 flex items-center gap-1.5">
                       <span>{label}</span>
-                      <span className="font-arabic text-gray-400 font-normal">({ar})</span>
+                      <span className="font-arabic text-[#a89f95] font-normal">({ar})</span>
                     </div>
                     {href ? (
-                      <a href={href} className="text-base font-bold text-dark hover:text-gold transition-colors">{value}</a>
+                      <a href={href} className="text-base font-bold text-[#2c2a27] hover:text-gold transition-colors">{value}</a>
                     ) : (
-                      <div className="text-sm font-semibold text-dark">{value}</div>
+                      <div className="text-sm font-semibold text-[#2c2a27]">{value}</div>
                     )}
                   </div>
                 </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
             </div>
 
             {/* Map placeholder with real image */}
-            <div className="relative h-48 rounded-2xl overflow-hidden border border-gray-200">
+            <div className="relative h-48 rounded-2xl overflow-hidden border border-[#e4e0da]">
               <Image src={imgs.gal2} alt="Dubai service areas" fill className="object-cover" sizes="(max-width:1024px) 100vw, 40vw" />
               <div className="absolute inset-0 bg-dark/70 flex items-center justify-center text-center p-6">
                 <div>
@@ -72,47 +72,47 @@ export default function ContactPage() {
 
           {/* FORM */}
           <AnimatedSection direction="right" className="lg:col-span-7">
-            <div className="bg-[#f8f7f4] p-8 sm:p-10 rounded-2xl border border-gray-200 shadow-lg">
+            <div className="bg-[#f0ede8] p-8 sm:p-10 rounded-2xl border border-[#e4e0da] shadow-lg">
               {done ? (
                 <div className="text-center py-8">
                   <CheckCircle2 className="w-16 h-16 text-gold mx-auto mb-4" />
-                  <h3 className="text-xl font-black text-dark mb-2">Message Received! تم استلام رسالتك</h3>
-                  <p className="text-sm text-gray-500 mb-6">We will get back to you within 30 minutes. سنتواصل معك خلال 30 دقيقة.</p>
-                  <button onClick={() => setDone(false)} className="brand-gradient text-white font-bold text-xs px-6 py-2.5 rounded-xl shadow hover:scale-105 transition-transform">
+                  <h3 className="text-xl font-black text-[#2c2a27] mb-2">Message Received! تم استلام رسالتك</h3>
+                  <p className="text-sm text-[#8a8278] mb-6">We will get back to you within 30 minutes. سنتواصل معك خلال 30 دقيقة.</p>
+                  <button onClick={() => setDone(false)} className="bg-[#4a6fa5] hover:bg-[#3b5a8a] text-white font-bold text-xs px-6 py-2.5 rounded-lg shadow-sm transition-colors">
                     Send Another Message · إرسال رسالة أخرى
                   </button>
                 </div>
               ) : (
                 <form onSubmit={(e) => { e.preventDefault(); setDone(true); }} className="space-y-4">
-                  <div className="text-xl font-black text-dark mb-1 flex items-center justify-between">
+                  <div className="text-xl font-black text-[#2c2a27] mb-1 flex items-center justify-between">
                     <span>Send a Direct Message</span>
                     <span className="font-arabic text-sm text-gold font-normal">أرسل لنا رسالة مباشرة</span>
                   </div>
-                  <p className="text-xs text-gray-500 mb-4">We reply within 30 minutes during business hours.</p>
+                  <p className="text-xs text-[#8a8278] mb-4">We reply within 30 minutes during business hours.</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[11px] font-bold uppercase text-gray-500 mb-1.5">Full Name * <span className="font-arabic font-normal">(الاسم الكامل)</span></label>
+                      <label className="block text-[11px] font-bold uppercase text-[#8a8278] mb-1.5">Full Name * <span className="font-arabic font-normal">(الاسم الكامل)</span></label>
                       <input type="text" required placeholder="Your Name"
-                        className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-white outline-none focus:border-gold transition-colors" />
+                        className="w-full px-4 py-3 rounded-xl text-sm border border-[#d6cfc5] bg-white outline-none focus:border-[#4a6fa5] transition-colors" />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold uppercase text-gray-500 mb-1.5">Phone * <span className="font-arabic font-normal">(رقم الهاتف)</span></label>
+                      <label className="block text-[11px] font-bold uppercase text-[#8a8278] mb-1.5">Phone * <span className="font-arabic font-normal">(رقم الهاتف)</span></label>
                       <input type="tel" required placeholder="+971 50 000 0000"
-                        className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-white outline-none focus:border-gold transition-colors" />
+                        className="w-full px-4 py-3 rounded-xl text-sm border border-[#d6cfc5] bg-white outline-none focus:border-[#4a6fa5] transition-colors" />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-[11px] font-bold uppercase text-gray-500 mb-1.5">Email Address <span className="font-arabic font-normal">(البريد الإلكتروني)</span></label>
+                    <label className="block text-[11px] font-bold uppercase text-[#8a8278] mb-1.5">Email Address <span className="font-arabic font-normal">(البريد الإلكتروني)</span></label>
                     <input type="email" placeholder="you@email.com"
-                      className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-white outline-none focus:border-gold transition-colors" />
+                      className="w-full px-4 py-3 rounded-xl text-sm border border-[#d6cfc5] bg-white outline-none focus:border-[#4a6fa5] transition-colors" />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-bold uppercase text-gray-500 mb-1.5">Message / Inquiry * <span className="font-arabic font-normal">(تفاصيل الطلب أو الاستفسار)</span></label>
+                    <label className="block text-[11px] font-bold uppercase text-[#8a8278] mb-1.5">Message / Inquiry * <span className="font-arabic font-normal">(تفاصيل الطلب أو الاستفسار)</span></label>
                     <textarea rows={4} required placeholder="Describe your marble condition or inquiry…"
-                      className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-white outline-none focus:border-gold transition-colors resize-none" />
+                      className="w-full px-4 py-3 rounded-xl text-sm border border-[#d6cfc5] bg-white outline-none focus:border-[#4a6fa5] transition-colors resize-none" />
                   </div>
                   <button type="submit"
-                    className="w-full brand-gradient text-white font-bold py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm hover:-translate-y-0.5 hover:shadow-gold/30 transition-all">
+                    className="w-full bg-[#4a6fa5] hover:bg-[#3b5a8a] text-white font-bold py-3.5 rounded-lg shadow-sm flex items-center justify-center gap-2 text-sm transition-colors">
                     <Send className="w-4 h-4" />
                     <span>Send Message</span>
                     <span className="font-arabic font-normal border-l border-white/30 pl-2">إرسال الرسالة</span>

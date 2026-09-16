@@ -10,15 +10,19 @@ interface Props {
   afterLabel?: string;
   title?: string;
   subtitle?: string;
+  arSubtitle?: string;
+  badge?: string;
 }
 
 export default function BeforeAfterSlider({
   beforeImage,
   afterImage,
-  beforeLabel = "Before: Dull & Scratched",
-  afterLabel = "After: 5-Star Mirror Polish",
-  title = "Real-Time Transformation",
-  subtitle = "Drag the slider left and right to witness the Italian crystallization difference"
+  beforeLabel = "Before: Dull, Scratched & Stained - قبل المعالجة",
+  afterLabel = "After: High-Definition Mirror Shine - بعد التلميع",
+  title,
+  subtitle,
+  arSubtitle,
+  badge,
 }: Props) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -44,17 +48,27 @@ export default function BeforeAfterSlider({
 
   return (
     <div className="w-full">
-      {(title || subtitle) && (
+      {(title || subtitle || badge) && (
         <div className="text-center mb-6 sm:mb-8">
+          {badge && (
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-700 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3">
+              <span className="w-2 h-2 rounded-full bg-amber-500" />
+              <span>{badge}</span>
+            </div>
+          )}
           {title && (
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-dark mb-2 flex items-center justify-center gap-2">
-              <Sparkles className="w-5 h-5 text-gold shrink-0" />
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#2c2a27] mb-2 leading-tight">
               {title}
             </h3>
           )}
           {subtitle && (
-            <p className="text-gray-500 text-xs sm:text-sm max-w-xl mx-auto px-4">
+            <p className="text-[#6b6560] text-xs sm:text-sm md:text-base max-w-2xl mx-auto px-4 mb-1">
               {subtitle}
+            </p>
+          )}
+          {arSubtitle && (
+            <p className="text-[#8a6c3e] font-arabic text-xs sm:text-sm font-semibold max-w-2xl mx-auto px-4">
+              {arSubtitle}
             </p>
           )}
         </div>
@@ -70,7 +84,7 @@ export default function BeforeAfterSlider({
         onTouchStart={() => setIsDragging(true)}
         onTouchEnd={() => setIsDragging(false)}
         onTouchMove={handleTouchMove}
-        className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] rounded-2xl sm:rounded-3xl overflow-hidden select-none cursor-ew-resize shadow-2xl border-2 border-gold/30 group touch-pan-y"
+        className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] rounded-2xl sm:rounded-3xl overflow-hidden select-none cursor-ew-resize shadow-xl border-2 border-[#d6cfc5] group touch-pan-y"
       >
         {/* AFTER IMAGE (Full width base) */}
         <div className="absolute inset-0 w-full h-full">
@@ -82,9 +96,9 @@ export default function BeforeAfterSlider({
             sizes="(max-width: 768px) 100vw, 1200px"
           />
           {/* After Label */}
-          <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-dark/90 backdrop-blur-md border border-gold/40 text-gold text-[10px] sm:text-xs md:text-sm font-bold px-2.5 py-1 sm:px-4 sm:py-1.5 rounded-full shadow-lg z-10 flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gold gold-pulse" />
-            {afterLabel}
+          <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-black/85 backdrop-blur-md border border-amber-500/50 text-amber-400 text-[10px] sm:text-xs md:text-sm font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg z-10 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+            <span>{afterLabel}</span>
           </div>
         </div>
 
@@ -98,25 +112,25 @@ export default function BeforeAfterSlider({
               src={beforeImage}
               alt="Before marble polishing"
               fill
-              className="object-cover filter contrast-75 brightness-75 grayscale-[40%]"
+              className="object-cover filter contrast-75 brightness-75 grayscale-[30%]"
               sizes="(max-width: 768px) 100vw, 1200px"
             />
-            <div className="absolute inset-0 bg-black/25" />
+            <div className="absolute inset-0 bg-black/20" />
           </div>
 
           {/* Before Label */}
-          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-black/85 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs md:text-sm font-semibold px-2.5 py-1 sm:px-4 sm:py-1.5 rounded-full shadow-lg z-10">
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-black/85 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs md:text-sm font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg z-10">
             {beforeLabel}
           </div>
         </div>
 
         {/* SLIDER DIVIDER LINE & HANDLE */}
         <div
-          className="absolute top-0 bottom-0 w-1 bg-gold shadow-[0_0_15px_rgba(201,168,76,0.9)] z-20 pointer-events-none"
+          className="absolute top-0 bottom-0 w-1 bg-amber-500 z-20 pointer-events-none"
           style={{ left: `${sliderPosition}%` }}
         >
-          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full gold-gradient shadow-[0_0_20px_rgba(201,168,76,0.8)] flex items-center justify-center text-dark font-black cursor-ew-resize border-2 border-white pointer-events-auto hover:scale-110 active:scale-95 transition-transform">
-            <MoveHorizontal className="w-4 h-4 sm:w-5 sm:h-5 text-dark" />
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-amber-500 shadow-lg flex items-center justify-center text-white font-black cursor-ew-resize border-2 border-white pointer-events-auto hover:scale-105 active:scale-95 transition-transform">
+            <MoveHorizontal className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </div>
         </div>
 
