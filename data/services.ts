@@ -5,7 +5,6 @@ export interface Service {
   arTitle: string;
   icon: string;
   description: string;
-  startingPrice: string;
   gradient: string;
   benefits: string[];
   process: { step: string; title: string; desc: string }[];
@@ -19,7 +18,6 @@ export const servicesData: Service[] = [
     arTitle: "تلميع أرضيات الرخام",
     icon: "💎",
     gradient: "from-[#1b1338] to-[#34206e]",
-    startingPrice: "AED 35/sqm",
     description: "Restores dull, high-traffic marble flooring to a flawless, mirror-like factory finish. Removes scratches, scuffs, and etching using micro-abrasive diamond technology.",
     benefits: [
       "Restores true deep mirror reflection and clarity",
@@ -42,7 +40,6 @@ export const servicesData: Service[] = [
     arTitle: "تنظيف عميق للرخام والجرانيت",
     icon: "🧹",
     gradient: "from-[#0e243a] to-[#144973]",
-    startingPrice: "AED 25/sqm",
     description: "Deep extraction of embedded dirt, grease, and discoloration from porous natural stones and grout lines using safe pH-balanced biological solutions.",
     benefits: [
       "Extracts stubborn dirt and ground-in grime from pores",
@@ -65,7 +62,6 @@ export const servicesData: Service[] = [
     arTitle: "جلي وصقل الرخام وتسويه الأرضيات",
     icon: "⚙️",
     gradient: "from-[#193116] to-[#2d5e27]",
-    startingPrice: "AED 45/sqm",
     description: "Heavy planetary grinding removes tile height differences (lippage), deep gouges, and stubborn burns to create a seamless, perfectly flat stone surface.",
     benefits: [
       "Eliminates uneven tile edges (lippage) across the floor",
@@ -88,7 +84,6 @@ export const servicesData: Service[] = [
     arTitle: "تلميع كاونترات المطبخ والمغاسل",
     icon: "🔧",
     gradient: "from-[#381f12] to-[#6e3a1f]",
-    startingPrice: "AED 120/piece",
     description: "Specialized hand-held diamond polishing restoring bathroom vanities, kitchen islands, and vertical claddings damaged by acidic foods and cosmetics.",
     benefits: [
       "Removes dull etch rings caused by lemon, vinegar, and acids",
@@ -111,7 +106,6 @@ export const servicesData: Service[] = [
     arTitle: "إزالة البقع العنيدة وعزل الرخام",
     icon: "✨",
     gradient: "from-[#112138] to-[#204575]",
-    startingPrice: "AED 30/sqm",
     description: "Scientific poultice extraction of oil, coffee, wine, hard water, and rust stains followed by deep penetrating nano-impregnation.",
     benefits: [
       "Draws out deep-seated oil, rust, coffee, and wine stains",
@@ -134,7 +128,6 @@ export const servicesData: Service[] = [
     arTitle: "تعبئة وإصلاح تشققات وفواصل الرخام",
     icon: "🔨",
     gradient: "from-[#381223] to-[#6e2044]",
-    startingPrice: "AED 50/repair",
     description: "Structural repair of cracks, chips, and damaged grout lines using Italian epoxy/polyester resins custom color-blended to the stone's vein structure.",
     benefits: [
       "Seamless color-matched epoxy blended to stone veining",

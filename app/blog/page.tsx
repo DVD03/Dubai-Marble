@@ -22,7 +22,7 @@ const articles = [
   {
     src: imgs.blog3,
     title: "Diamond Grinding vs. Crystallization: Which Treatment Does Your Floor Need?",
-    excerpt: "A clear breakdown of when heavy mechanical diamond lippage removal is necessary versus a lighter chemical crystallization polish — and the cost difference between the two approaches.",
+    excerpt: "A clear breakdown of when heavy mechanical diamond lippage removal is necessary versus a lighter chemical crystallization polish — and the benefits of each approach for Dubai properties.",
     date: "April 2026", author: "Technical Supervisor",
   },
 ];

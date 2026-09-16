@@ -5,8 +5,8 @@ export interface FAQ {
 
 export const faqsData: FAQ[] = [
   {
-    question: "How much does marble polishing cost in Dubai?",
-    answer: "Our prices start from AED 35 per square meter for standard diamond polishing and crystallization. Deep grinding, lippage leveling, or extensive crack repairs may vary. We provide a 100% free on-site inspection and fixed quote with no hidden charges."
+    question: "How does marble polishing quotation work in Dubai?",
+    answer: "Marble restoration pricing depends on the stone variety, total area, and surface condition (such as scratch depth or lippage). We provide a 100% free on-site inspection across all Dubai communities, followed by an accurate, transparent written quotation with zero hidden charges."
   },
   {
     question: "How long does the marble polishing process take?",

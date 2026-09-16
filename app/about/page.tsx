@@ -27,7 +27,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="text-white font-bold text-base">Italian Diamond Wet-Polishing System</div>
-                <div className="text-brand-amber text-xs font-semibold font-arabic mt-0.5">نظام الجلي الماسي الإيطالي · 100% بدون غبار</div>
+                <div className="text-gold text-xs font-semibold font-arabic mt-0.5">نظام الجلي الماسي الإيطالي · 100% بدون غبار</div>
               </div>
             </div>
             <div className="absolute -top-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden border-4 border-white shadow-xl hidden sm:block">
@@ -40,7 +40,7 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl font-black text-dark mb-3 leading-tight">
               Restoring Timeless Beauty to Natural Stone in Dubai
             </h2>
-            <div className="text-brand-azure font-bold font-arabic text-sm mb-4">
+            <div className="text-gold font-bold font-arabic text-sm mb-4">
               جريدزبرو إنترناشونال — التميز الإيطالي في جلي وتلميع الرخام
             </div>
             <p className="text-gray-600 leading-relaxed mb-4">
@@ -58,10 +58,10 @@ export default function AboutPage() {
                 { en: "16+ years serving 5-star hotels, luxury villas & commercial towers", ar: "خبرة 16+ عاماً في خدمة الفنادق والقصور" },
               ].map((pt, i) => (
                 <div key={i} className="flex items-start gap-2.5 text-sm text-gray-700">
-                  <CheckCircle2 className="w-4 h-4 text-brand-azure shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                   <div>
                     <span>{pt.en}</span>
-                    <span className="text-xs text-brand-amber font-arabic ml-2">({pt.ar})</span>
+                    <span className="text-xs text-gold font-arabic ml-2">({pt.ar})</span>
                   </div>
                 </div>
               ))}
@@ -87,16 +87,16 @@ export default function AboutPage() {
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
             {[
-              { icon: <Award className="w-7 h-7 text-brand-amber" />,      title: "5-Star Quality",        ar: "جودة 5 نجوم",        desc: "We deliver the same standard expected in Dubai's most prestigious hotels — every single time." },
-              { icon: <ShieldCheck className="w-7 h-7 text-brand-azure" />, title: "Certified Materials",   ar: "مواد معتمدة",         desc: "Italian crystallizers and nano-sealants approved for use in occupied residential spaces." },
-              { icon: <CheckCircle2 className="w-7 h-7 text-brand-violet" />,title: "Transparent Pricing",  ar: "أسعار واضحة وشفافة",  desc: "Free on-site inspection followed by a fixed, written quotation — no hidden fees, ever." },
-              { icon: <ShieldCheck className="w-7 h-7 text-brand-coral" />, title: "Satisfaction Backed",   ar: "ضمان رضا العميل",     desc: "We are not satisfied until you are. Every project carries our full workmanship guarantee." },
+              { icon: <Award className="w-7 h-7 text-gold" />,      title: "5-Star Quality",        ar: "جودة 5 نجوم",        desc: "We deliver the same standard expected in Dubai's most prestigious hotels — every single time." },
+              { icon: <ShieldCheck className="w-7 h-7 text-gold" />, title: "Certified Materials",   ar: "مواد معتمدة",         desc: "Italian crystallizers and nano-sealants approved for use in occupied residential spaces." },
+              { icon: <CheckCircle2 className="w-7 h-7 text-gold" />,title: "Transparent Pricing",  ar: "أسعار واضحة وشفافة",  desc: "Free on-site inspection followed by a fixed, written quotation — no hidden fees, ever." },
+              { icon: <ShieldCheck className="w-7 h-7 text-gold" />, title: "Satisfaction Backed",   ar: "ضمان رضا العميل",     desc: "We are not satisfied until you are. Every project carries our full workmanship guarantee." },
             ].map(({ icon, title, ar, desc }, i) => (
               <AnimatedSection key={title} delay={i * 0.1}>
                 <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm h-full flex flex-col">
-                  <div className="w-12 h-12 rounded-xl bg-white/80 border border-brand-violet/20 flex items-center justify-center mb-4 shadow-sm">{icon}</div>
+                  <div className="w-12 h-12 rounded-xl bg-white/80 border border-gold/20 flex items-center justify-center mb-4 shadow-sm">{icon}</div>
                   <h3 className="font-bold text-dark text-base mb-0.5">{title}</h3>
-                  <div className="text-xs text-brand-amber font-arabic font-semibold mb-2">{ar}</div>
+                  <div className="text-xs text-gold font-arabic font-semibold mb-2">{ar}</div>
                   <p className="text-sm text-gray-500 leading-relaxed flex-grow">{desc}</p>
                 </div>
               </AnimatedSection>

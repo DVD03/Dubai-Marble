@@ -9,13 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: { DEFAULT: "#f59e0b", light: "#fbbf24", dark: "#d97706" },
+        gold: { DEFAULT: "#f59e0b", light: "#fbbf24", dark: "#d97706", warm: "#c9a84c" },
         brand: {
           amber: "#f59e0b",
-          coral: "#ef4444",
-          violet: "#7c3aed",
-          azure: "#0284c7",
-          cyan: "#06b6d4",
+          coral: "#f59e0b",
+          violet: "#d97706",
+          azure: "#f59e0b",
+          cyan: "#fbbf24",
+          gold: "#f59e0b",
         },
         dark: { DEFAULT: "#0b0c16", sec: "#121324", card: "#181932", slate: "#1e2040" },
       },
@@ -31,10 +32,10 @@ const config: Config = {
         "logo-glow": "logo-glow 4s ease-in-out infinite alternate",
       },
       backgroundImage: {
-        "gold-gradient": "linear-gradient(135deg, #f59e0b, #fbbf24)",
-        "brand-gradient": "linear-gradient(135deg, #f59e0b 0%, #ef4444 35%, #7c3aed 70%, #0284c7 100%)",
-        "azure-gradient": "linear-gradient(135deg, #0284c7, #38bdf8)",
-        "violet-gradient": "linear-gradient(135deg, #7c3aed, #a855f7)",
+        "gold-gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%)",
+        "brand-gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%)",
+        "azure-gradient": "linear-gradient(135deg, #d97706, #fbbf24)",
+        "violet-gradient": "linear-gradient(135deg, #d97706, #fbbf24)",
       },
     },
   },

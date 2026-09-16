@@ -21,17 +21,17 @@ export default function Footer() {
                 alt="GridsPro International Logo"
                 width={260}
                 height={80}
-                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_0_16px_rgba(124,58,237,0.35)] transition-all group-hover:scale-105"
+                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_0_14px_rgba(245,158,11,0.3)] transition-all group-hover:scale-105"
               />
             </Link>
-            <div className="text-[12px] font-bold text-brand-amber font-arabic mb-2">
+            <div className="text-[12px] font-bold text-gold font-arabic mb-2">
               جريدزبرو إنترناشونال · تلميع وجلي الرخام الطبيعي
             </div>
             <p className="text-xs sm:text-sm leading-relaxed mb-4 text-gray-300">
               Dubai's premier natural stone restoration specialists — serving 5-star hotels, luxury villas, and commercial properties with Italian diamond technology since 2008.
             </p>
-            <div className="flex items-start gap-1.5 text-xs text-brand-amber font-semibold mb-2">
-              <MapPin className="w-3.5 h-3.5 text-brand-azure shrink-0 mt-0.5" />
+            <div className="flex items-start gap-1.5 text-xs text-gold font-semibold mb-2">
+              <MapPin className="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" />
               <span>Villa 34, Street 27 B, Al Quoz 1, Dubai</span>
             </div>
             <div className="text-[11px] text-gray-400 font-arabic">
@@ -43,14 +43,14 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5 flex items-center justify-between">
               <span>Our Services</span>
-              <span className="font-arabic text-brand-amber text-[11px] normal-case">خدماتنا</span>
+              <span className="font-arabic text-gold text-[11px] normal-case">خدماتنا</span>
             </h3>
             <ul className="flex flex-col gap-2">
               {servicesData.map((s) => (
                 <li key={s.slug}>
                   <Link href={`/services/${s.slug}`}
-                    className="text-xs sm:text-sm flex items-center gap-1.5 hover:text-brand-amber transition-colors text-gray-300">
-                    <ChevronRight className="w-3 h-3 text-brand-azure shrink-0" />
+                    className="text-xs sm:text-sm flex items-center gap-1.5 hover:text-gold transition-colors text-gray-300">
+                    <ChevronRight className="w-3 h-3 text-gold shrink-0" />
                     {s.title}
                   </Link>
                 </li>
@@ -62,7 +62,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5 flex items-center justify-between">
               <span>Quick Links</span>
-              <span className="font-arabic text-brand-amber text-[11px] normal-case">روابط سريعة</span>
+              <span className="font-arabic text-gold text-[11px] normal-case">روابط سريعة</span>
             </h3>
             <ul className="flex flex-col gap-2">
               {[
@@ -77,9 +77,9 @@ export default function Footer() {
               ].map(([href, label, ar]) => (
                 <li key={href}>
                   <Link href={href}
-                    className={`text-xs sm:text-sm flex items-center justify-between hover:text-brand-amber transition-colors text-gray-300 ${href === "/booking" ? "text-brand-amber font-bold" : ""}`}>
+                    className={`text-xs sm:text-sm flex items-center justify-between hover:text-gold transition-colors text-gray-300 ${href === "/booking" ? "text-gold font-bold" : ""}`}>
                     <span className="flex items-center gap-1.5">
-                      <ChevronRight className="w-3 h-3 text-brand-violet shrink-0" />
+                      <ChevronRight className="w-3 h-3 text-gold shrink-0" />
                       {label}
                     </span>
                     <span className="font-arabic text-[10px] text-gray-500">{ar}</span>
@@ -93,7 +93,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5 flex items-center justify-between">
               <span>Working Hours</span>
-              <span className="font-arabic text-brand-amber text-[11px] normal-case">أوقات العمل</span>
+              <span className="font-arabic text-gold text-[11px] normal-case">أوقات العمل</span>
             </h3>
             <div className="flex flex-col gap-1.5 text-xs mb-5 text-gray-300">
               {[
@@ -103,20 +103,20 @@ export default function Footer() {
               ].map(([d, t, ar]) => (
                 <div key={d} className="flex justify-between py-1 border-b border-white/5">
                   <span>{d} <span className="text-[10px] text-gray-500 font-arabic">({ar})</span></span>
-                  <span className="text-brand-amber font-bold">{t}</span>
+                  <span className="text-gold font-bold">{t}</span>
                 </div>
               ))}
             </div>
             
             <a
               href="tel:+971508164087"
-              className="p-3.5 bg-[#121324] rounded-xl border border-brand-violet/30 flex items-center gap-3 hover:border-brand-amber transition-colors shadow-lg block"
+              className="p-3.5 bg-[#121324] rounded-xl border border-gold/25 flex items-center gap-3 hover:border-gold transition-colors shadow-lg block"
             >
               <div className="w-9 h-9 rounded-lg brand-gradient flex items-center justify-center text-white font-bold shrink-0 shadow">
                 <Phone className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-[10px] text-brand-amber font-bold uppercase tracking-wider flex items-center gap-1.5">
+                <div className="text-[10px] text-gold font-bold uppercase tracking-wider flex items-center gap-1.5">
                   <span>Direct Hotline</span>
                   <span className="font-arabic text-[9px] text-gray-400">· الخط الساخن</span>
                 </div>

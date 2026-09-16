@@ -21,8 +21,8 @@ export default function ReviewsPage() {
             {testimonialsData.map((t, i) => (
               <AnimatedSection key={t.name} delay={i * 0.07}>
                 <div className="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm flex flex-col h-full">
-                  <div className="flex gap-1 text-brand-amber mb-4">
-                    {[...Array(t.rating)].map((_, j) => <Star key={j} className="w-4 h-4 fill-brand-amber text-brand-amber" />)}
+                  <div className="flex gap-1 text-gold mb-4">
+                    {[...Array(t.rating)].map((_, j) => <Star key={j} className="w-4 h-4 fill-gold text-gold" />)}
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed mb-6 flex-grow">
                     &ldquo;{t.comment}&rdquo;
@@ -49,19 +49,19 @@ export default function ReviewsPage() {
               <form onSubmit={(e) => { e.preventDefault(); alert("Thank you for your feedback!"); }} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input type="text" required placeholder="Your Name / الاسم *"
-                    className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-gray-50 outline-none focus:border-brand-amber transition-colors" />
+                    className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-gray-50 outline-none focus:border-gold transition-colors" />
                   <input type="text" placeholder="Dubai Location / المنطقة"
-                    className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-gray-50 outline-none focus:border-brand-amber transition-colors" />
+                    className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-gray-50 outline-none focus:border-gold transition-colors" />
                 </div>
-                <select className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-gray-50 outline-none focus:border-brand-amber transition-colors">
+                <select className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-gray-50 outline-none focus:border-gold transition-colors">
                   <option>5 Stars — Exceptional / ممتاز</option>
                   <option>4 Stars — Great / جيد جداً</option>
                   <option>3 Stars — Average / جيد</option>
                 </select>
                 <textarea rows={3} required placeholder="Share your experience... / اكتب تجربتك هنا"
-                  className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-gray-50 outline-none focus:border-brand-amber transition-colors resize-none" />
+                  className="w-full px-4 py-3 rounded-xl text-sm border border-gray-200 bg-gray-50 outline-none focus:border-gold transition-colors resize-none" />
                 <button type="submit"
-                  className="w-full brand-gradient text-white font-bold py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm hover:-translate-y-0.5 transition-transform hover:shadow-brand-amber/30">
+                  className="w-full brand-gradient text-white font-bold py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm hover:-translate-y-0.5 hover:shadow-gold/30 transition-all">
                   <MessageSquarePlus className="w-4 h-4" /> Submit Review | إرسال التقييم
                 </button>
               </form>

@@ -59,11 +59,11 @@ export default function Navbar() {
                 width={220}
                 height={68}
                 priority
-                className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_0_14px_rgba(124,58,237,0.4)] transition-all duration-300 group-hover:scale-105"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(245,158,11,0.3)] transition-all duration-300 group-hover:scale-105"
               />
             </div>
             <div className="hidden xl:flex flex-col border-l border-white/15 pl-3">
-              <span className="text-[11px] font-bold text-brand-amber font-arabic leading-tight">
+              <span className="text-[11px] font-bold text-gold font-arabic leading-tight">
                 جريدزبرو إنترناشونال
               </span>
               <span className="text-[10px] text-gray-400 font-arabic">
@@ -88,7 +88,7 @@ export default function Navbar() {
                 {isActive(href) && (
                   <motion.span
                     layoutId="nav-underline"
-                    className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full brand-gradient shadow-[0_0_10px_rgba(124,58,237,0.8)]"
+                    className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full brand-gradient shadow-[0_0_10px_rgba(245,158,11,0.8)]"
                   />
                 )}
               </Link>
@@ -105,7 +105,7 @@ export default function Navbar() {
                 {svcActive && (
                   <motion.span
                     layoutId="nav-underline"
-                    className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full brand-gradient shadow-[0_0_10px_rgba(124,58,237,0.8)]"
+                    className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full brand-gradient shadow-[0_0_10px_rgba(245,158,11,0.8)]"
                   />
                 )}
               </Link>
@@ -117,14 +117,14 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{  opacity: 0, y: -8, scale: 0.97 }}
                     transition={{ duration: 0.18 }}
-                    className="absolute top-full left-0 w-72 bg-[#121324] border border-brand-violet/30 rounded-2xl p-2 shadow-2xl backdrop-blur-xl"
+                    className="absolute top-full left-0 w-72 bg-[#121324] border border-gold/30 rounded-2xl p-2 shadow-2xl backdrop-blur-xl"
                   >
                     <Link
                       href="/services"
-                      className="block px-3 py-2 text-[11px] font-bold text-brand-amber uppercase tracking-wider border-b border-white/10 mb-1 flex items-center justify-between"
+                      className="block px-3 py-2 text-[11px] font-bold text-gold uppercase tracking-wider border-b border-white/10 mb-1 flex items-center justify-between"
                     >
                       <span>All Services</span>
-                      <span className="font-arabic text-[11px] text-brand-azure normal-case">كافة الخدمات ←</span>
+                      <span className="font-arabic text-[11px] text-gold normal-case">كافة الخدمات ←</span>
                     </Link>
                     {servicesData.map((s) => (
                       <Link
@@ -132,8 +132,8 @@ export default function Navbar() {
                         href={`/services/${s.slug}`}
                         className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-[13px] transition-colors ${
                           pathname === `/services/${s.slug}`
-                            ? "bg-brand-violet/20 text-brand-amber font-bold border border-brand-violet/30"
-                            : "text-gray-300 hover:bg-white/5 hover:text-brand-amber font-medium"
+                            ? "bg-gold/20 text-gold font-bold border border-gold/30"
+                            : "text-gray-300 hover:bg-white/5 hover:text-gold font-medium"
                         }`}
                       >
                         <span className="flex items-center gap-2">
@@ -151,7 +151,7 @@ export default function Navbar() {
           {/* DESKTOP CTA */}
           <Link
             href="/booking"
-            className="hidden lg:flex brand-gradient text-white font-extrabold text-xs px-4 py-2.5 rounded-xl shadow-[0_0_20px_rgba(124,58,237,0.45)] hover:scale-105 transition-all items-center gap-2 group"
+            className="hidden lg:flex brand-gradient text-white font-extrabold text-xs px-4 py-2.5 rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:scale-105 transition-all items-center gap-2 group"
           >
             <CalendarCheck className="w-4 h-4" />
             <span>Book Inspection</span>
@@ -194,8 +194,8 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(false)}
                     className={`py-3 px-4 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
                       isActive(href)
-                        ? "text-brand-amber bg-brand-violet/20 border border-brand-violet/40"
-                        : "text-white hover:text-brand-amber hover:bg-white/5"
+                        ? "text-gold bg-gold/20 border border-gold/40"
+                        : "text-white hover:text-gold hover:bg-white/5"
                     }`}
                   >
                     <span>{label}</span>
@@ -210,16 +210,16 @@ export default function Navbar() {
                     className="w-full py-3 px-4 flex items-center justify-between text-base font-bold text-white bg-white/5"
                   >
                     <span className="flex items-center gap-2">
-                      Our Services <span className="text-xs font-arabic text-brand-azure font-normal">· خدماتنا</span>
+                      Our Services <span className="text-xs font-arabic text-gold font-normal">· خدماتنا</span>
                     </span>
-                    <ChevronDown className={`w-4 h-4 text-brand-amber transition-transform ${servicesAccordionOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`w-4 h-4 text-gold transition-transform ${servicesAccordionOpen ? "rotate-180" : ""}`} />
                   </button>
                   {servicesAccordionOpen && (
                     <div className="p-2 space-y-1 bg-[#121324]">
                       <Link
                         href="/services"
                         onClick={() => setMobileOpen(false)}
-                        className="block py-2 px-3 text-xs font-bold text-brand-amber uppercase tracking-wider"
+                        className="block py-2 px-3 text-xs font-bold text-gold uppercase tracking-wider"
                       >
                         All Services Overview &rarr;
                       </Link>
@@ -228,7 +228,7 @@ export default function Navbar() {
                           key={s.slug}
                           href={`/services/${s.slug}`}
                           onClick={() => setMobileOpen(false)}
-                          className="block py-2 px-3 rounded-lg text-sm text-gray-300 hover:text-brand-amber hover:bg-white/5"
+                          className="block py-2 px-3 rounded-lg text-sm text-gray-300 hover:text-gold hover:bg-white/5"
                         >
                           &bull; {s.title}
                         </Link>
@@ -241,17 +241,17 @@ export default function Navbar() {
                 <div className="pt-4 mt-2 border-t border-white/10 flex flex-col gap-3">
                   <a
                     href="tel:+971508164087"
-                    className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-brand-violet/40 text-white font-bold text-sm bg-[#121324] shadow"
+                    className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-gold/40 text-white font-bold text-sm bg-[#121324] shadow hover:border-gold"
                   >
-                    <Phone className="w-4 h-4 text-brand-amber" /> Call Hotline: +971 50 816 4087
+                    <Phone className="w-4 h-4 text-gold" /> Call Hotline: +971 50 816 4087
                   </a>
                   <a
                     href="https://api.whatsapp.com/send?phone=971508164087&text=Hi%2C%20I%20need%20marble%20polishing%20in%20Dubai."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#25d366] text-white font-bold text-sm shadow"
+                    className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-gold/40 text-white font-bold text-sm bg-[#121324] shadow hover:border-gold"
                   >
-                    <MessageCircle className="w-4 h-4 fill-white" /> WhatsApp Us Now · تواصل عبر واتساب
+                    <MessageCircle className="w-4 h-4 text-gold" /> WhatsApp Us Now · تواصل عبر واتساب
                   </a>
                   <Link
                     href="/booking"

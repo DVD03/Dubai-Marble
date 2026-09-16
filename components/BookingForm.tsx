@@ -45,7 +45,7 @@ export default function BookingForm({ isDark = false }: { isDark?: boolean }) {
             </p>
             <button
               onClick={() => setStatus("idle")}
-              className="gold-gradient text-dark text-xs font-bold px-6 py-2.5 rounded-xl shadow"
+              className="brand-gradient text-white text-xs font-bold px-6 py-2.5 rounded-xl shadow hover:scale-105 transition-transform"
             >
               Submit Another Request
             </button>
@@ -59,9 +59,9 @@ export default function BookingForm({ isDark = false }: { isDark?: boolean }) {
           >
             <h3 className={`text-xl font-bold mb-1 flex items-center justify-between ${isDark ? "text-white" : "text-dark"}`}>
               <span>Schedule Free Inspection</span>
-              <span className="text-xs font-normal text-brand-amber font-arabic">حجز معاينة مجانية</span>
+              <span className="text-xs font-normal text-gold font-arabic">حجز معاينة مجانية</span>
             </h3>
-            <p className={`text-xs mb-6 ${isDark ? "text-brand-amber" : "text-gray-500"}`}>
+            <p className={`text-xs mb-6 ${isDark ? "text-gold" : "text-gray-500"}`}>
               100% Free · No Obligation · Fixed Price Quote <span className="font-arabic font-normal">| مجاني بالكامل وبدون التزام</span>
             </p>
 
@@ -100,7 +100,7 @@ export default function BookingForm({ isDark = false }: { isDark?: boolean }) {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full brand-gradient text-white font-bold py-3.5 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-brand-amber/30 transition-all flex items-center justify-center gap-2 text-sm disabled:opacity-70"
+              className="w-full brand-gradient text-white font-bold py-3.5 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-gold/30 transition-all flex items-center justify-center gap-2 text-sm disabled:opacity-70"
             >
               {status === "loading" ? (
                 <Loader2 className="w-4 h-4 animate-spin" />

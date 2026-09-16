@@ -46,7 +46,7 @@ export const testimonialsData: Testimonial[] = [
     name: "Lisa Thompson",
     role: "Property Manager, DIFC",
     rating: 5,
-    comment: "Fair pricing starting at AED 35/sqm, polite technicians, and impeccable cleanup. We will definitely use them for our yearly maintenance.",
+    comment: "Transparent quotation, polite technicians, and impeccable cleanup. We will definitely use them for our yearly maintenance.",
     initials: "LT"
   }
 ];

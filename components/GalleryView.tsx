@@ -46,7 +46,7 @@ export default function GalleryView() {
             onClick={() => setActive(f.id)}
             className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
               active === f.id
-                ? "gold-gradient text-dark shadow-md scale-105"
+                ? "brand-gradient text-white shadow-md scale-105 font-bold"
                 : "bg-white text-gray-700 border border-gray-200 hover:border-gold hover:text-gold"
             }`}
           >

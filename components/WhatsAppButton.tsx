@@ -30,7 +30,7 @@ export default function WhatsAppButton() {
             </button>
             <div className="font-bold text-gold mb-1 text-sm">Quick Response</div>
             <div className="text-gray-300 leading-relaxed">
-              Chat with our senior stone specialist for instant pricing on WhatsApp.
+              Chat with our senior stone specialist for an instant free consultation on WhatsApp.
             </div>
           </motion.div>
         )}

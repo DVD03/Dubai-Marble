@@ -23,7 +23,7 @@ export default function ServicesPage() {
       <PageHeader
         breadcrumb="Services"
         title="Our Marble Restoration Services"
-        subtitle="Specialized stone care from AED 35/sqm — backed by Italian diamond technology and 16 years of Dubai expertise."
+        subtitle="Comprehensive natural stone care — backed by Italian diamond technology and 16 years of Dubai expertise."
         image={imgs.servicesHero}
       />
 
@@ -41,13 +41,13 @@ export default function ServicesPage() {
                   <div className="img-card aspect-[16/10] relative">
                     <Image src={serviceImages[s.slug] ?? imgs.svcFloor} alt={s.title} fill className="object-cover" sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw" />
                     <div className="img-card-overlay" />
-                    <div className="absolute top-3 right-3 bg-dark/80 backdrop-blur-sm px-3 py-1 rounded-full border border-brand-amber/30">
-                      <span className="text-brand-amber text-[11px] font-bold">From {s.startingPrice}</span>
+                    <div className="absolute top-3 right-3 bg-dark/80 backdrop-blur-sm px-3 py-1 rounded-full border border-gold/30">
+                      <span className="text-gold text-[11px] font-bold">Free Inspection</span>
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <div className="text-[12px] font-semibold text-brand-amber mb-1 font-arabic">{s.arTitle}</div>
-                    <h2 className="text-xl font-bold text-dark mb-2 group-hover:text-brand-amber transition-colors">{s.title}</h2>
+                    <div className="text-[12px] font-semibold text-gold mb-1 font-arabic">{s.arTitle}</div>
+                    <h2 className="text-xl font-bold text-dark mb-2 group-hover:text-gold transition-colors">{s.title}</h2>
                     <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">{s.description}</p>
                     <Link href={`/services/${s.slug}`}
                       className="brand-gradient text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow self-start flex items-center gap-2 hover:-translate-y-0.5 transition-transform">

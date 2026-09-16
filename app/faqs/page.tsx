@@ -14,7 +14,7 @@ export default function FaqsPage() {
       <PageHeader
         breadcrumb="FAQs"
         title="Frequently Asked Questions"
-        subtitle="Everything you need to know about marble polishing pricing, procedures, and care in Dubai."
+        subtitle="Everything you need to know about marble polishing procedures, free inspections, and stone care in Dubai."
         image={imgs.faqsHero}
       />
 
@@ -38,12 +38,12 @@ export default function FaqsPage() {
             <p className="text-sm text-gray-500 mb-6">Our Dubai technical team is available 7 days a week.</p>
             <div className="flex justify-center gap-4 flex-wrap">
               <Link href="/contact"
-                className="brand-gradient text-white font-bold text-xs px-6 py-3 rounded-xl shadow flex items-center gap-2 hover:-translate-y-0.5 transition-transform hover:shadow-brand-amber/30">
+                className="brand-gradient text-white font-bold text-xs px-6 py-3 rounded-xl shadow flex items-center gap-2 hover:-translate-y-0.5 transition-transform hover:shadow-gold/30">
                 <Mail className="w-4 h-4" /> Contact Us | تواصل معنا
               </Link>
               <a href="tel:+971508164087"
-                className="border border-gray-200 text-dark font-semibold text-xs px-6 py-3 rounded-xl hover:border-brand-amber hover:text-brand-amber transition-colors flex items-center gap-2">
-                <Phone className="w-4 h-4 text-brand-amber" /> +971 50 816 4087
+                className="border border-gray-200 text-dark font-semibold text-xs px-6 py-3 rounded-xl hover:border-gold hover:text-gold transition-colors flex items-center gap-2">
+                <Phone className="w-4 h-4 text-gold" /> +971 50 816 4087
               </a>
             </div>
           </div>
