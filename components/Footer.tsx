@@ -17,11 +17,11 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block mb-4 sm:mb-5 group">
               <Image
-                src="/logo.png"
+                src="/logo-original.png"
                 alt="GridsPro International Logo"
-                width={260}
-                height={80}
-                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_0_14px_rgba(245,158,11,0.3)] transition-all group-hover:scale-105"
+                width={280}
+                height={95}
+                className="h-13 sm:h-16 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all group-hover:scale-105"
               />
             </Link>
             <div className="text-[12px] font-bold text-gold font-arabic mb-2">

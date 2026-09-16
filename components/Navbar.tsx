@@ -54,12 +54,12 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 shrink-0 group py-1">
             <div className="relative">
               <Image
-                src="/logo.png"
+                src="/logo-original.png"
                 alt="GridsPro International Logo"
-                width={220}
-                height={68}
+                width={260}
+                height={88}
                 priority
-                className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(245,158,11,0.3)] transition-all duration-300 group-hover:scale-105"
+                className="h-11 sm:h-13 md:h-15 w-auto object-contain filter drop-shadow-[0_0_14px_rgba(245,158,11,0.3)] transition-all duration-300 group-hover:scale-105"
               />
             </div>
             <div className="hidden xl:flex flex-col border-l border-white/15 pl-3">
