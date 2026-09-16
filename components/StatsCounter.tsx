@@ -31,19 +31,22 @@ export default function StatsCounter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10">
           {[
-            { target: 1500, suffix: "+", label: "Satisfied Clients" },
-            { target: 16,   suffix: "+", label: "Years Experience"  },
-            { target: 98,   suffix: "%", label: "Satisfaction Rate" },
-            { target: 50,   suffix: "+", label: "5-Star Hotels"     },
-          ].map(({ target, suffix, label }, i) => (
+            { target: 1500, suffix: "+", label: "Satisfied Clients", ar: "عميل متميز" },
+            { target: 16,   suffix: "+", label: "Years Experience",  ar: "عاماً من الخبرة" },
+            { target: 98,   suffix: "%", label: "Satisfaction Rate", ar: "نسبة الرضا" },
+            { target: 50,   suffix: "+", label: "5-Star Hotels",     ar: "فندق 5 نجوم" },
+          ].map(({ target, suffix, label, ar }, i) => (
             <AnimatedSection key={label} delay={i * 0.1} className="text-center">
               <div className="text-4xl sm:text-5xl font-black text-dark leading-none mb-2 tabular-nums">
                 <Counter target={target} suffix={suffix} />
               </div>
-              <div className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              <div className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wider">
                 {label}
               </div>
-              <div className="w-8 h-[3px] gold-gradient mx-auto mt-3 rounded-full" />
+              <div className="text-[11px] text-gray-500 font-arabic mt-0.5">
+                {ar}
+              </div>
+              <div className="w-10 h-[3px] brand-gradient mx-auto mt-3 rounded-full" />
             </AnimatedSection>
           ))}
         </div>

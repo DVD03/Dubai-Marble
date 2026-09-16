@@ -6,19 +6,19 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Dubai Marble Polishing | تلميع الرخام دبي",
-  description: "Professional marble polishing, restoration, grinding, sealing & cleaning services in Dubai. Free inspection, affordable prices from AED 35/sqm & 5-star results.",
-  keywords: ["Dubai Marble Polishing", "Marble Restoration Dubai", "Marble Cleaning UAE", "Floor Grinding Dubai", "Crystallization"],
-  authors: [{ name: "Dubai Marble Polishing" }],
+  title: "GridsPro International | Dubai Marble Polishing & Restoration",
+  description: "GridsPro International - Professional marble polishing, restoration, grinding, sealing & cleaning services in Dubai. Located at Villa 34, Street 27 B, Al Quoz 1, Dubai.",
+  keywords: ["GridsPro International", "Dubai Marble Polishing", "Marble Restoration Dubai", "Marble Cleaning UAE", "Floor Grinding Dubai", "Crystallization Dubai"],
+  authors: [{ name: "GridsPro International" }],
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
   openGraph: {
-    title: "Dubai Marble Polishing | تلميع الرخام دبي",
-    description: "5-Star Marble Floor Polishing, Restoration & Cleaning Services in Dubai.",
+    title: "GridsPro International | Dubai Marble Polishing & Restoration",
+    description: "5-Star Marble Floor Polishing, Restoration & Cleaning Services in Dubai by GridsPro International.",
     url: "https://dubaimarblepolishing.ae",
-    siteName: "Dubai Marble Polishing",
+    siteName: "GridsPro International",
     locale: "en_US",
     type: "website",
   },

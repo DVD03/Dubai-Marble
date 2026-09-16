@@ -126,7 +126,7 @@ export default function ProcessTabs() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-bold">
-              Italian Certified Equipment &bull; Dubai Marble Polishing
+              Italian Certified Equipment &bull; GridsPro International
             </div>
           </div>
         </motion.div>

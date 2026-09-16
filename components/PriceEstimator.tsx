@@ -51,15 +51,16 @@ export default function PriceEstimator({ isDark = false }: { isDark?: boolean })
     >
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-gray-100 dark:border-white/10">
         <div>
-          <div className="inline-flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-widest mb-1.5">
-            <Calculator className="w-4 h-4" />
-            Instant Cost Estimator
+          <div className="inline-flex items-center gap-2 text-brand-amber text-xs font-bold uppercase tracking-widest mb-1.5">
+            <Calculator className="w-4 h-4 text-brand-amber" />
+            <span>Instant Cost Estimator</span>
+            <span className="font-arabic font-normal text-[11px] text-brand-cyan">حاسبة التكلفة التقديرية</span>
           </div>
           <h3 className={`text-2xl sm:text-3xl font-black ${isDark ? "text-white" : "text-dark"}`}>
             Calculate Your Restoration Cost
           </h3>
         </div>
-        <div className="bg-gold/15 border border-gold/30 text-gold px-4 py-1.5 rounded-full text-xs font-bold shrink-0">
+        <div className="bg-brand-amber/15 border border-brand-amber/30 text-brand-amber px-4 py-1.5 rounded-full text-xs font-bold shrink-0">
           100% Free Transparent Pricing
         </div>
       </div>
@@ -70,7 +71,7 @@ export default function PriceEstimator({ isDark = false }: { isDark?: boolean })
           {/* Step 1: Stone Type */}
           <div>
             <label className={`block text-xs font-bold uppercase tracking-wider mb-2 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-              1. Select Stone Type
+              1. Select Stone Type <span className="font-arabic lowercase text-gray-400 font-normal">نوع الرخام / الحجر</span>
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {stones.map((s) => (
@@ -80,10 +81,10 @@ export default function PriceEstimator({ isDark = false }: { isDark?: boolean })
                   onClick={() => setSelectedStone(s.id)}
                   className={`text-left px-4 py-3 rounded-xl text-xs font-semibold border transition-all ${
                     selectedStone === s.id
-                      ? "gold-gradient text-dark font-bold border-transparent shadow-md scale-[1.02]"
+                      ? "brand-gradient text-white font-bold border-transparent shadow-md scale-[1.02]"
                       : isDark
-                      ? "bg-white/5 border-white/10 text-gray-300 hover:border-gold/50"
-                      : "bg-gray-50 border-gray-200 text-gray-700 hover:border-gold"
+                      ? "bg-white/5 border-white/10 text-gray-300 hover:border-brand-amber/50"
+                      : "bg-gray-50 border-gray-200 text-gray-700 hover:border-brand-amber"
                   }`}
                 >
                   {s.name}
@@ -95,7 +96,7 @@ export default function PriceEstimator({ isDark = false }: { isDark?: boolean })
           {/* Step 2: Service Type */}
           <div>
             <label className={`block text-xs font-bold uppercase tracking-wider mb-2 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-              2. Select Restoration Service
+              2. Select Restoration Service <span className="font-arabic lowercase text-gray-400 font-normal">نوع الخدمة</span>
             </label>
             <div className="space-y-2">
               {services.map((svc) => (
@@ -105,14 +106,14 @@ export default function PriceEstimator({ isDark = false }: { isDark?: boolean })
                   onClick={() => setSelectedService(svc.id)}
                   className={`w-full text-left px-4 py-3 rounded-xl text-xs font-semibold border flex items-center justify-between transition-all ${
                     selectedService === svc.id
-                      ? "gold-gradient text-dark font-bold border-transparent shadow-md"
+                      ? "brand-gradient text-white font-bold border-transparent shadow-md"
                       : isDark
-                      ? "bg-white/5 border-white/10 text-gray-300 hover:border-gold/50"
-                      : "bg-gray-50 border-gray-200 text-gray-700 hover:border-gold"
+                      ? "bg-white/5 border-white/10 text-gray-300 hover:border-brand-amber/50"
+                      : "bg-gray-50 border-gray-200 text-gray-700 hover:border-brand-amber"
                   }`}
                 >
                   <span>{svc.name}</span>
-                  <span className="font-bold opacity-85">~AED {svc.baseRate}/sqm</span>
+                  <span className="font-bold opacity-90">~AED {svc.baseRate}/sqm</span>
                 </button>
               ))}
             </div>
@@ -122,9 +123,9 @@ export default function PriceEstimator({ isDark = false }: { isDark?: boolean })
           <div>
             <div className="flex justify-between items-center mb-2">
               <label className={`text-xs font-bold uppercase tracking-wider ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-                3. Approximate Area (Square Meters)
+                3. Approximate Area (Square Meters) <span className="font-arabic lowercase text-gray-400 font-normal">المساحة</span>
               </label>
-              <span className="text-gold font-extrabold text-lg">{sqm} m² ({Math.round(sqm * 10.764)} sq.ft)</span>
+              <span className="text-brand-amber font-extrabold text-lg">{sqm} m² ({Math.round(sqm * 10.764)} sq.ft)</span>
             </div>
             <input
               type="range"
@@ -133,7 +134,7 @@ export default function PriceEstimator({ isDark = false }: { isDark?: boolean })
               step="5"
               value={sqm}
               onChange={(e) => setSqm(Number(e.target.value))}
-              className="w-full h-2.5 bg-gray-200 dark:bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#c9a84c]"
+              className="w-full h-2.5 bg-gray-200 dark:bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#f59e0b]"
             />
             <div className="flex justify-between text-[11px] text-gray-400 mt-1">
               <span>Small Room (10 m²)</span>
@@ -146,37 +147,37 @@ export default function PriceEstimator({ isDark = false }: { isDark?: boolean })
         {/* Result Card Column */}
         <div className="lg:col-span-5">
           <div className={`p-7 rounded-2xl border text-center relative overflow-hidden shadow-xl ${
-            isDark ? "bg-[#0d0d1a] border-gold/40" : "bg-[#f8f7f4] border-gold/30"
+            isDark ? "bg-[#0d0d1a] border-brand-amber/40" : "bg-[#f8f7f4] border-brand-amber/30"
           }`}>
-            <div className="absolute top-0 inset-x-0 h-1 gold-gradient" />
+            <div className="absolute top-0 inset-x-0 h-1 brand-gradient" />
             <div className="text-xs uppercase tracking-widest font-bold text-gray-400 mb-1">
-              Estimated Total
+              Estimated Total · السعر التقديري
             </div>
-            <div className="text-4xl sm:text-5xl font-black text-gold my-2 tracking-tight">
+            <div className="text-4xl sm:text-5xl font-black brand-gradient-text my-2 tracking-tight">
               AED {estimatedTotal.toLocaleString()}
             </div>
             <div className="text-xs text-gray-500 dark:text-gray-300 mb-6 font-medium">
-              Calculated at approx. <strong className="text-gold font-bold">AED {ratePerSqm}/m²</strong> for {sqm} m²
+              Calculated at approx. <strong className="text-brand-amber font-bold">AED {ratePerSqm}/m²</strong> for {sqm} m²
             </div>
 
             <div className="space-y-2.5 text-left text-xs text-gray-600 dark:text-gray-300 mb-6 border-y border-gray-200 dark:border-white/10 py-4">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-brand-amber shrink-0" />
                 <span>Includes Free In-Person Inspection & Exact Measurement</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-brand-amber shrink-0" />
                 <span>100% Dustless Italian Diamond Honing</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-brand-amber shrink-0" />
                 <span>Protective Crystallization & High Gloss Polish</span>
               </div>
             </div>
 
             <Link
               href={`/booking?service=${selectedService}&area=${sqm}&stone=${selectedStone}`}
-              className="w-full gold-gradient text-dark font-extrabold text-sm py-4 rounded-xl shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all"
+              className="w-full brand-gradient text-white font-extrabold text-sm py-4 rounded-xl shadow-xl flex items-center justify-center gap-2 hover:scale-105 hover:shadow-brand-amber/30 transition-all"
             >
               Book Inspection at This Price <ArrowRight className="w-4 h-4" />
             </Link>

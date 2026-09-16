@@ -57,39 +57,40 @@ export default function BookingForm({ isDark = false }: { isDark?: boolean }) {
             animate={{ opacity: 1 }}
             onSubmit={handleSubmit}
           >
-            <h3 className={`text-xl font-bold mb-1 ${isDark ? "text-white" : "text-dark"}`}>
-              Schedule Free Inspection
+            <h3 className={`text-xl font-bold mb-1 flex items-center justify-between ${isDark ? "text-white" : "text-dark"}`}>
+              <span>Schedule Free Inspection</span>
+              <span className="text-xs font-normal text-brand-amber font-arabic">حجز معاينة مجانية</span>
             </h3>
-            <p className={`text-xs mb-6 ${isDark ? "text-gold" : "text-gray-500"}`}>
-              100% Free · No Obligation · Fixed Price Quote
+            <p className={`text-xs mb-6 ${isDark ? "text-brand-amber" : "text-gray-500"}`}>
+              100% Free · No Obligation · Fixed Price Quote <span className="font-arabic font-normal">| مجاني بالكامل وبدون التزام</span>
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label className={labelCls}>Your Name *</label>
-                <input type="text" required placeholder="Ahmed Al Mansouri" className={fieldCls} />
+                <label className={labelCls}>Your Name <span className="font-arabic lowercase">الاسم</span> *</label>
+                <input type="text" required placeholder="Ahmed Al Mansouri / Name" className={fieldCls} />
               </div>
               <div>
-                <label className={labelCls}>Phone / WhatsApp *</label>
-                <input type="tel" required placeholder="+971 50 000 0000" className={fieldCls} />
+                <label className={labelCls}>Phone / WhatsApp <span className="font-arabic lowercase">رقم الهاتف</span> *</label>
+                <input type="tel" required placeholder="+971 50 816 4087" className={fieldCls} />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label className={labelCls}>Preferred Date *</label>
+                <label className={labelCls}>Preferred Date <span className="font-arabic lowercase">التاريخ المفضل</span> *</label>
                 <input type="date" required className={fieldCls} />
               </div>
               <div>
-                <label className={labelCls}>Dubai Area</label>
-                <input type="text" placeholder="e.g. Dubai Marina, JBR" className={fieldCls} />
+                <label className={labelCls}>Dubai Area <span className="font-arabic lowercase">المنطقة</span></label>
+                <input type="text" placeholder="e.g. Dubai Marina, Al Quoz, Palm Jumeirah" className={fieldCls} />
               </div>
             </div>
 
             <div className="mb-5">
-              <label className={labelCls}>Service Required</label>
+              <label className={labelCls}>Service Required <span className="font-arabic lowercase">الخدمة المطلوبة</span></label>
               <select required className={`${fieldCls} ${isDark ? "bg-dark-card" : ""}`}>
-                <option value="">Select a service…</option>
+                <option value="">Select a service… / اختر الخدمة</option>
                 {servicesData.map((s) => (
                   <option key={s.slug} value={s.slug}>{s.title}</option>
                 ))}
@@ -99,14 +100,14 @@ export default function BookingForm({ isDark = false }: { isDark?: boolean }) {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full gold-gradient text-dark font-bold py-3.5 rounded-xl shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 text-sm disabled:opacity-70"
+              className="w-full brand-gradient text-white font-bold py-3.5 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-brand-amber/30 transition-all flex items-center justify-center gap-2 text-sm disabled:opacity-70"
             >
               {status === "loading" ? (
                 <Loader2 className="w-4 h-4 animate-spin" />
               ) : (
                 <CalendarCheck className="w-4 h-4" />
               )}
-              {status === "loading" ? "Submitting…" : "Book Free Inspection Now"}
+              {status === "loading" ? "Submitting…" : "Book Free Inspection Now | احجز المعاينة الآن"}
             </button>
           </motion.form>
         )}

@@ -4,22 +4,22 @@ import { ShieldCheck, Award, Wrench, Sparkles, CheckCircle2 } from "lucide-react
 
 export default function TrustBadges() {
   return (
-    <div className="py-8 bg-[#13132a] border-y border-gold/20 text-white">
+    <div className="py-8 bg-[#0e101f] border-y border-brand-violet/25 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
           {[
-            { icon: <Award className="w-5 h-5 text-gold" />, title: "Klindex Italy Certified", sub: "Planetary Diamond Machines" },
-            { icon: <Sparkles className="w-5 h-5 text-gold" />, title: "Tenax Chemical Partner", sub: "Authentic Crystallizers" },
-            { icon: <Wrench className="w-5 h-5 text-gold" />, title: "100% Dustless Technology", sub: "Occupied Home Safe" },
-            { icon: <ShieldCheck className="w-5 h-5 text-gold" />, title: "10-Year Stone Protection", sub: "Satisfaction Guaranteed" },
-          ].map((b, i) => (
+            { icon: <Award className="w-5 h-5 text-brand-amber" />, title: "Klindex Italy Certified", sub: "معدات ألماس إيطالية معتمدة" },
+            { icon: <Sparkles className="w-5 h-5 text-brand-azure" />, title: "Tenax Chemical Partner", sub: "شريك مواد الكريستال الأصلية" },
+            { icon: <Wrench className="w-5 h-5 text-brand-violet" />, title: "100% Dustless System", sub: "نظام مائي نقي بدون غبار" },
+            { icon: <ShieldCheck className="w-5 h-5 text-brand-coral" />, title: "Workmanship Warranty", sub: "ضمان شامل على جودة العمل" },
+          ].map((b) => (
             <div key={b.title} className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center shrink-0 shadow-sm">
                 {b.icon}
               </div>
               <div>
                 <div className="font-bold text-white text-xs sm:text-sm leading-tight">{b.title}</div>
-                <div className="text-[11px] text-gray-400">{b.sub}</div>
+                <div className="text-[11px] text-gray-400 font-arabic">{b.sub}</div>
               </div>
             </div>
           ))}

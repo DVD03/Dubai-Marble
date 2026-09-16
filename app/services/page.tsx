@@ -30,7 +30,7 @@ export default function ServicesPage() {
       <section className="py-24 bg-[#f8f7f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-            <SectionLabel>All Services</SectionLabel>
+            <SectionLabel arabic="خدماتنا الشاملة">All Services</SectionLabel>
             <h2 className="text-3xl font-black text-dark">Comprehensive Treatments for Every Stone</h2>
           </AnimatedSection>
 
@@ -41,17 +41,19 @@ export default function ServicesPage() {
                   <div className="img-card aspect-[16/10] relative">
                     <Image src={serviceImages[s.slug] ?? imgs.svcFloor} alt={s.title} fill className="object-cover" sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw" />
                     <div className="img-card-overlay" />
-                    <div className="absolute top-3 right-3 bg-dark/70 backdrop-blur-sm px-3 py-1 rounded-full">
-                      <span className="text-gold text-[11px] font-bold">From {s.startingPrice}</span>
+                    <div className="absolute top-3 right-3 bg-dark/80 backdrop-blur-sm px-3 py-1 rounded-full border border-brand-amber/30">
+                      <span className="text-brand-amber text-[11px] font-bold">From {s.startingPrice}</span>
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <div className="text-[11px] font-semibold text-gold mb-1">{s.arTitle}</div>
-                    <h2 className="text-xl font-bold text-dark mb-2 group-hover:text-gold transition-colors">{s.title}</h2>
+                    <div className="text-[12px] font-semibold text-brand-amber mb-1 font-arabic">{s.arTitle}</div>
+                    <h2 className="text-xl font-bold text-dark mb-2 group-hover:text-brand-amber transition-colors">{s.title}</h2>
                     <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">{s.description}</p>
                     <Link href={`/services/${s.slug}`}
-                      className="gold-gradient text-dark font-bold text-xs px-5 py-2.5 rounded-xl shadow self-start flex items-center gap-2 hover:-translate-y-0.5 transition-transform">
-                      View Details <ArrowRight className="w-3.5 h-3.5" />
+                      className="brand-gradient text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow self-start flex items-center gap-2 hover:-translate-y-0.5 transition-transform">
+                      <span>View Details</span>
+                      <span className="font-arabic font-normal text-[11px]">عرض التفاصيل</span>
+                      <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </Link>
                   </div>
                 </div>

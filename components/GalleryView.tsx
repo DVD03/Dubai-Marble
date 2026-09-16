@@ -115,7 +115,7 @@ export default function GalleryView() {
               <div className="p-6 flex items-start justify-between gap-4">
                 <div>
                   <h3 className="font-bold text-white text-lg">{lightbox.title}</h3>
-                  <p className="text-gold text-sm mt-1">{lightbox.location} · Dubai Marble Polishing</p>
+                  <p className="text-gold text-sm mt-1">{lightbox.location} · GridsPro International</p>
                 </div>
                 <button onClick={() => setLightbox(null)} className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white">
                   <X className="w-5 h-5" />

@@ -18,30 +18,39 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4 sm:mb-5 group">
               <Image
                 src="/logo.png"
-                alt="Dubai Marble Polishing Logo"
+                alt="GridsPro International Logo"
                 width={260}
                 height={80}
-                className="h-14 sm:h-16 w-auto object-contain filter drop-shadow-[0_2px_14px_rgba(201,168,76,0.35)] transition-all group-hover:scale-105"
+                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_0_16px_rgba(124,58,237,0.35)] transition-all group-hover:scale-105"
               />
             </Link>
+            <div className="text-[12px] font-bold text-brand-amber font-arabic mb-2">
+              جريدزبرو إنترناشونال · تلميع وجلي الرخام الطبيعي
+            </div>
             <p className="text-xs sm:text-sm leading-relaxed mb-4 text-gray-300">
               Dubai's premier natural stone restoration specialists — serving 5-star hotels, luxury villas, and commercial properties with Italian diamond technology since 2008.
             </p>
-            <div className="flex items-center gap-1.5 text-xs text-gold/90 font-semibold">
-              <MapPin className="w-3.5 h-3.5 text-gold shrink-0" />
-              All Dubai Communities — 30-Min Dispatch
+            <div className="flex items-start gap-1.5 text-xs text-brand-amber font-semibold mb-2">
+              <MapPin className="w-3.5 h-3.5 text-brand-azure shrink-0 mt-0.5" />
+              <span>Villa 34, Street 27 B, Al Quoz 1, Dubai</span>
+            </div>
+            <div className="text-[11px] text-gray-400 font-arabic">
+              القوز 1، شارع 27 ب، فيلا 34، دبي
             </div>
           </div>
 
           {/* SERVICES */}
           <div>
-            <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5">Our Services</h3>
+            <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5 flex items-center justify-between">
+              <span>Our Services</span>
+              <span className="font-arabic text-brand-amber text-[11px] normal-case">خدماتنا</span>
+            </h3>
             <ul className="flex flex-col gap-2">
               {servicesData.map((s) => (
                 <li key={s.slug}>
                   <Link href={`/services/${s.slug}`}
-                    className="text-xs sm:text-sm flex items-center gap-1.5 hover:text-gold transition-colors text-gray-300">
-                    <ChevronRight className="w-3 h-3 text-gold shrink-0" />
+                    className="text-xs sm:text-sm flex items-center gap-1.5 hover:text-brand-amber transition-colors text-gray-300">
+                    <ChevronRight className="w-3 h-3 text-brand-azure shrink-0" />
                     {s.title}
                   </Link>
                 </li>
@@ -51,23 +60,29 @@ export default function Footer() {
 
           {/* QUICK LINKS */}
           <div>
-            <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5">Quick Links</h3>
+            <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5 flex items-center justify-between">
+              <span>Quick Links</span>
+              <span className="font-arabic text-brand-amber text-[11px] normal-case">روابط سريعة</span>
+            </h3>
             <ul className="flex flex-col gap-2">
               {[
-                ["/",         "Home"],
-                ["/about",    "About Us"],
-                ["/gallery",  "Before & After Gallery"],
-                ["/reviews",  "Client Reviews"],
-                ["/faqs",     "FAQs"],
-                ["/blog",     "Blog & Guides"],
-                ["/contact",  "Contact Us"],
-                ["/booking",  "Book Free Inspection"],
-              ].map(([href, label]) => (
+                ["/",         "Home",                    "الرئيسية"],
+                ["/about",    "About Us",                "من نحن"],
+                ["/gallery",  "Before & After Gallery",  "معرض الأعمال"],
+                ["/reviews",  "Client Reviews",          "آراء العملاء"],
+                ["/faqs",     "FAQs",                    "الأسئلة الشائعة"],
+                ["/blog",     "Blog & Guides",           "المدونة والارشادات"],
+                ["/contact",  "Contact Us",              "تواصل معنا"],
+                ["/booking",  "Book Free Inspection",    "حجز معاينة مجانية"],
+              ].map(([href, label, ar]) => (
                 <li key={href}>
                   <Link href={href}
-                    className={`text-xs sm:text-sm flex items-center gap-1.5 hover:text-gold transition-colors text-gray-300 ${href === "/booking" ? "text-gold font-bold" : ""}`}>
-                    <ChevronRight className="w-3 h-3 text-gold shrink-0" />
-                    {label}
+                    className={`text-xs sm:text-sm flex items-center justify-between hover:text-brand-amber transition-colors text-gray-300 ${href === "/booking" ? "text-brand-amber font-bold" : ""}`}>
+                    <span className="flex items-center gap-1.5">
+                      <ChevronRight className="w-3 h-3 text-brand-violet shrink-0" />
+                      {label}
+                    </span>
+                    <span className="font-arabic text-[10px] text-gray-500">{ar}</span>
                   </Link>
                 </li>
               ))}
@@ -76,37 +91,43 @@ export default function Footer() {
 
           {/* HOURS & DIRECT CALL */}
           <div>
-            <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5">Working Hours</h3>
+            <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5 flex items-center justify-between">
+              <span>Working Hours</span>
+              <span className="font-arabic text-brand-amber text-[11px] normal-case">أوقات العمل</span>
+            </h3>
             <div className="flex flex-col gap-1.5 text-xs mb-5 text-gray-300">
               {[
-                ["Mon – Fri", "9:00 AM – 6:00 PM"],
-                ["Saturday",  "9:00 AM – 4:00 PM"],
-                ["Sunday",    "10:00 AM – 3:00 PM"],
-              ].map(([d, t]) => (
+                ["Mon – Fri", "9:00 AM – 6:00 PM", "الإثنين – الجمعة"],
+                ["Saturday",  "9:00 AM – 4:00 PM", "السبت"],
+                ["Sunday",    "10:00 AM – 3:00 PM", "الأحد"],
+              ].map(([d, t, ar]) => (
                 <div key={d} className="flex justify-between py-1 border-b border-white/5">
-                  <span>{d}</span>
-                  <span className="text-gold font-bold">{t}</span>
+                  <span>{d} <span className="text-[10px] text-gray-500 font-arabic">({ar})</span></span>
+                  <span className="text-brand-amber font-bold">{t}</span>
                 </div>
               ))}
             </div>
             
             <a
-              href="tel:+971522774953"
-              className="p-3.5 bg-[#13132a] rounded-xl border border-gold/30 flex items-center gap-3 hover:border-gold transition-colors shadow-lg block"
+              href="tel:+971508164087"
+              className="p-3.5 bg-[#121324] rounded-xl border border-brand-violet/30 flex items-center gap-3 hover:border-brand-amber transition-colors shadow-lg block"
             >
-              <div className="w-9 h-9 rounded-lg gold-gradient flex items-center justify-center text-dark font-bold shrink-0">
+              <div className="w-9 h-9 rounded-lg brand-gradient flex items-center justify-center text-white font-bold shrink-0 shadow">
                 <Phone className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-[10px] text-gold font-bold uppercase tracking-wider">Direct Hotline</div>
-                <div className="text-white font-black text-sm sm:text-base">+971 52 277 4953</div>
+                <div className="text-[10px] text-brand-amber font-bold uppercase tracking-wider flex items-center gap-1.5">
+                  <span>Direct Hotline</span>
+                  <span className="font-arabic text-[9px] text-gray-400">· الخط الساخن</span>
+                </div>
+                <div className="text-white font-black text-sm sm:text-base">+971 50 816 4087</div>
               </div>
             </a>
           </div>
         </div>
 
         <div className="pt-6 pb-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400 text-center sm:text-left">
-          <div>&copy; {year} Dubai Marble Polishing. All rights reserved.</div>
+          <div>&copy; {year} GridsPro International. All rights reserved. <span className="font-arabic">· جميع الحقوق محفوظة</span></div>
           <div className="flex gap-4 sm:gap-6">
             {["Privacy Policy","Terms of Service","Sitemap"].map((l) => (
               <Link key={l} href="/contact" className="hover:text-gold transition-colors">{l}</Link>
