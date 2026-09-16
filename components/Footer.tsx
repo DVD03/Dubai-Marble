@@ -15,20 +15,14 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-5 group">
-              <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-gold/30 p-1 bg-white/5 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                <Image
-                  src="/logo.png"
-                  alt="Dubai Marble Polishing Logo"
-                  width={40}
-                  height={40}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-              <div>
-                <div className="text-white font-bold text-[16px] leading-tight">Dubai Marble Polishing</div>
-                <div className="text-gold text-[11px] font-medium">تلميع الرخام دبي</div>
-              </div>
+            <Link href="/" className="inline-block mb-6 group">
+              <Image
+                src="/logo.png"
+                alt="Dubai Marble Polishing Logo"
+                width={280}
+                height={86}
+                className="h-16 sm:h-20 w-auto object-contain filter drop-shadow-[0_2px_14px_rgba(201,168,76,0.35)] transition-all group-hover:scale-105"
+              />
             </Link>
             <p className="text-sm leading-relaxed mb-5">
               Dubai's premier natural stone restoration specialists — serving 5-star hotels, luxury villas, and commercial properties with Italian diamond technology since 2008.
