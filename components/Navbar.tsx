@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, Phone, CalendarCheck, Sparkles } from "lucide-react";
 import { servicesData } from "@/data/services";
@@ -41,8 +42,15 @@ export default function Navbar() {
 
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="w-11 h-11 rounded-xl gold-gradient flex items-center justify-center text-dark font-black text-xl shadow-[0_0_15px_rgba(201,168,76,0.6)] group-hover:scale-105 transition-transform">
-              M
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-[0_0_15px_rgba(201,168,76,0.5)] group-hover:scale-105 transition-transform bg-dark-card flex items-center justify-center p-1 border border-gold/30">
+              <Image
+                src="/logo.png"
+                alt="Dubai Marble Polishing Logo"
+                width={46}
+                height={46}
+                className="object-contain w-full h-full"
+                priority
+              />
             </div>
             <div>
               <div className="text-white font-extrabold text-[17px] leading-tight tracking-tight flex items-center gap-1.5">

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, ChevronRight, CalendarCheck, Clock } from "lucide-react";
 import { servicesData } from "@/data/services";
 
@@ -14,8 +15,16 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center text-dark font-black text-xl">M</div>
+            <Link href="/" className="flex items-center gap-3 mb-5 group">
+              <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-gold/30 p-1 bg-white/5 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                <Image
+                  src="/logo.png"
+                  alt="Dubai Marble Polishing Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain w-full h-full"
+                />
+              </div>
               <div>
                 <div className="text-white font-bold text-[16px] leading-tight">Dubai Marble Polishing</div>
                 <div className="text-gold text-[11px] font-medium">تلميع الرخام دبي</div>
