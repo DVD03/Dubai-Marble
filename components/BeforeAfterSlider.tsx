@@ -15,8 +15,8 @@ interface Props {
 export default function BeforeAfterSlider({
   beforeImage,
   afterImage,
-  beforeLabel = "Before (Dull & Scratched)",
-  afterLabel = "After (5-Star Mirror Finish)",
+  beforeLabel = "Before: Dull & Scratched",
+  afterLabel = "After: 5-Star Mirror Polish",
   title = "Real-Time Transformation",
   subtitle = "Drag the slider left and right to witness the Italian crystallization difference"
 }: Props) {
@@ -45,15 +45,15 @@ export default function BeforeAfterSlider({
   return (
     <div className="w-full">
       {(title || subtitle) && (
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 sm:mb-8">
           {title && (
-            <h3 className="text-2xl sm:text-3xl font-black text-dark mb-2 flex items-center justify-center gap-2">
-              <Sparkles className="w-5 h-5 text-gold" />
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-dark mb-2 flex items-center justify-center gap-2">
+              <Sparkles className="w-5 h-5 text-gold shrink-0" />
               {title}
             </h3>
           )}
           {subtitle && (
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">
+            <p className="text-gray-500 text-xs sm:text-sm max-w-xl mx-auto px-4">
               {subtitle}
             </p>
           )}
@@ -67,21 +67,23 @@ export default function BeforeAfterSlider({
         onMouseUp={() => setIsDragging(false)}
         onMouseLeave={() => setIsDragging(false)}
         onMouseMove={handleMouseMove}
+        onTouchStart={() => setIsDragging(true)}
+        onTouchEnd={() => setIsDragging(false)}
         onTouchMove={handleTouchMove}
-        className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden select-none cursor-ew-resize shadow-2xl border-2 border-gold/30 group"
+        className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] rounded-2xl sm:rounded-3xl overflow-hidden select-none cursor-ew-resize shadow-2xl border-2 border-gold/30 group touch-pan-y"
       >
-        {/* AFTER IMAGE (Background / Full Width) */}
+        {/* AFTER IMAGE (Full width base) */}
         <div className="absolute inset-0 w-full h-full">
           <Image
             src={afterImage}
             alt="After marble polishing"
             fill
             className="object-cover"
-            sizes="(max-width: 1200px) 100vw, 1200px"
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
-          {/* Label Badge */}
-          <div className="absolute top-4 right-4 bg-dark/85 backdrop-blur-md border border-gold/40 text-gold text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full shadow-lg z-10 flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-gold gold-pulse" />
+          {/* After Label */}
+          <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-dark/90 backdrop-blur-md border border-gold/40 text-gold text-[10px] sm:text-xs md:text-sm font-bold px-2.5 py-1 sm:px-4 sm:py-1.5 rounded-full shadow-lg z-10 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gold gold-pulse" />
             {afterLabel}
           </div>
         </div>
@@ -97,14 +99,13 @@ export default function BeforeAfterSlider({
               alt="Before marble polishing"
               fill
               className="object-cover filter contrast-75 brightness-75 grayscale-[40%]"
-              sizes="(max-width: 1200px) 100vw, 1200px"
+              sizes="(max-width: 768px) 100vw, 1200px"
             />
-            {/* Dark tint on before image */}
             <div className="absolute inset-0 bg-black/25" />
           </div>
 
-          {/* Label Badge */}
-          <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full shadow-lg z-10">
+          {/* Before Label */}
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-black/85 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs md:text-sm font-semibold px-2.5 py-1 sm:px-4 sm:py-1.5 rounded-full shadow-lg z-10">
             {beforeLabel}
           </div>
         </div>
@@ -114,15 +115,14 @@ export default function BeforeAfterSlider({
           className="absolute top-0 bottom-0 w-1 bg-gold shadow-[0_0_15px_rgba(201,168,76,0.9)] z-20 pointer-events-none"
           style={{ left: `${sliderPosition}%` }}
         >
-          {/* Gold Grip Handle */}
-          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 sm:w-13 sm:h-13 rounded-full gold-gradient shadow-[0_0_20px_rgba(201,168,76,0.8)] flex items-center justify-center text-dark font-black cursor-ew-resize border-2 border-white pointer-events-auto hover:scale-110 active:scale-95 transition-transform">
-            <MoveHorizontal className="w-5 h-5 text-dark" />
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full gold-gradient shadow-[0_0_20px_rgba(201,168,76,0.8)] flex items-center justify-center text-dark font-black cursor-ew-resize border-2 border-white pointer-events-auto hover:scale-110 active:scale-95 transition-transform">
+            <MoveHorizontal className="w-4 h-4 sm:w-5 sm:h-5 text-dark" />
           </div>
         </div>
 
-        {/* Helper Hint at Bottom */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-dark/75 backdrop-blur-md px-4 py-1 rounded-full text-[11px] text-gray-200 border border-white/10 pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-          &larr; Drag Slider To Compare &rarr;
+        {/* Bottom Hint */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-dark/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] sm:text-xs text-gray-200 border border-white/10 pointer-events-none">
+          &larr; Slide To Compare &rarr;
         </div>
       </div>
     </div>
