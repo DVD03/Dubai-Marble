@@ -179,7 +179,7 @@ export default function HomePage() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-black leading-[1.15] mb-6 text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
                 <span className="text-[#60A5FA] underline decoration-[#D96B27] decoration-5 underline-offset-4">
-                  GridPro &amp; Dubai Marble Polishing
+                  GridPro &amp; Marble Polishing
                 </span>
                 <br />
                 <span className="text-2xl sm:text-3xl lg:text-[28px] font-bold text-white mt-3 block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
