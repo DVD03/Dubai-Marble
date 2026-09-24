@@ -17,7 +17,7 @@ export const servicesData: Service[] = [
     subtitle: "5-Stage Diamond Polishing & Italian Crystallization",
     arTitle: "تلميع أرضيات الرخام",
     icon: "💎",
-    gradient: "from-[#1b1338] to-[#34206e]",
+    gradient: "from-[#123B6D] to-[#3333FF]",
     description: "Restores dull, high-traffic marble flooring to a flawless, mirror-like factory finish. Removes scratches, scuffs, and etching using micro-abrasive diamond technology.",
     benefits: [
       "Restores true deep mirror reflection and clarity",
@@ -39,7 +39,7 @@ export const servicesData: Service[] = [
     subtitle: "pH-Neutral Deep Sanitization & Grout Rejuvenation",
     arTitle: "تنظيف عميق للرخام والجرانيت",
     icon: "🧹",
-    gradient: "from-[#0e243a] to-[#144973]",
+    gradient: "from-[#0000CC] to-[#123B6D]",
     description: "Deep extraction of embedded dirt, grease, and discoloration from porous natural stones and grout lines using safe pH-balanced biological solutions.",
     benefits: [
       "Extracts stubborn dirt and ground-in grime from pores",
@@ -61,7 +61,7 @@ export const servicesData: Service[] = [
     subtitle: "Precision Lippage Removal & Heavy Floor Leveling",
     arTitle: "جلي وصقل الرخام وتسويه الأرضيات",
     icon: "⚙️",
-    gradient: "from-[#193116] to-[#2d5e27]",
+    gradient: "from-[#111827] to-[#1F2937]",
     description: "Heavy planetary grinding removes tile height differences (lippage), deep gouges, and stubborn burns to create a seamless, perfectly flat stone surface.",
     benefits: [
       "Eliminates uneven tile edges (lippage) across the floor",
@@ -83,7 +83,7 @@ export const servicesData: Service[] = [
     subtitle: "Kitchen Islands, Vanity Tops & Staircases",
     arTitle: "تلميع كاونترات المطبخ والمغاسل",
     icon: "🔧",
-    gradient: "from-[#381f12] to-[#6e3a1f]",
+    gradient: "from-[#FF8C00] to-[#FFA500]",
     description: "Specialized hand-held diamond polishing restoring bathroom vanities, kitchen islands, and vertical claddings damaged by acidic foods and cosmetics.",
     benefits: [
       "Removes dull etch rings caused by lemon, vinegar, and acids",
@@ -105,7 +105,7 @@ export const servicesData: Service[] = [
     subtitle: "Chemical Poultice Extraction & Oleophobic Impregnation",
     arTitle: "إزالة البقع العنيدة وعزل الرخام",
     icon: "✨",
-    gradient: "from-[#112138] to-[#204575]",
+    gradient: "from-[#0000CC] to-[#123B6D]",
     description: "Scientific poultice extraction of oil, coffee, wine, hard water, and rust stains followed by deep penetrating nano-impregnation.",
     benefits: [
       "Draws out deep-seated oil, rust, coffee, and wine stains",
@@ -127,7 +127,7 @@ export const servicesData: Service[] = [
     subtitle: "Color-Matched Resin Bonding for Chipped & Broken Stone",
     arTitle: "تعبئة وإصلاح تشققات وفواصل الرخام",
     icon: "🔨",
-    gradient: "from-[#381223] to-[#6e2044]",
+    gradient: "from-[#FF8C00] to-[#CC7000]",
     description: "Structural repair of cracks, chips, and damaged grout lines using Italian epoxy/polyester resins custom color-blended to the stone's vein structure.",
     benefits: [
       "Seamless color-matched epoxy blended to stone veining",

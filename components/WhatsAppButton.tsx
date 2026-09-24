@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{  opacity: 0, y: 12, scale: .92 }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
-            className="bg-[#10233F] border border-white/20 text-white text-xs p-4 rounded-2xl shadow-2xl max-w-[220px] relative"
+            className="bg-[#111827] border border-white/20 text-white text-xs p-4 rounded-2xl shadow-2xl max-w-[220px] relative"
           >
             <button
               onClick={() => setShow(false)}
@@ -28,8 +28,8 @@ export default function WhatsAppButton() {
             >
               <X className="w-3.5 h-3.5" />
             </button>
-            <div className="font-bold text-[#C89B3C] mb-1 text-sm">Quick Response</div>
-            <div className="text-[#D0D5DD] leading-relaxed">
+            <div className="font-bold text-[#FF8C00] mb-1 text-sm">Quick Response</div>
+            <div className="text-[#9CA3AF] leading-relaxed">
               Chat with our senior stone specialist for an instant free consultation on WhatsApp.
             </div>
           </motion.div>

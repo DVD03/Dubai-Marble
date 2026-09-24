@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { Play, Sparkles, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+import { Sparkles, ShieldCheck } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionLabel from "./SectionLabel";
+import { imgs } from "@/data/images";
 
 export interface VideoItem {
   id: string;
@@ -102,28 +104,46 @@ export default function MachineryVideoShowcase() {
   const [activeVideo, setActiveVideo] = useState<VideoItem>(videoItems[0]);
 
   return (
-    <section className="py-16 sm:py-20 bg-white border-y border-[#D9E2EC] overflow-hidden">
+    <section className="py-24 sm:py-32 bg-white border-y border-[#E5E7EB] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center max-w-3xl mx-auto mb-10">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <SectionLabel variant="minimal" arabic="فيديوهات العمل والآلات">
             MACHINERY IN ACTION
           </SectionLabel>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#10233F] mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3">
             Watch Our Equipment &amp; Restoration Process
           </h2>
-          <div className="text-[#1557B0] font-arabic font-bold text-sm sm:text-base mb-3">
+          <div className="text-[#D96B27] font-arabic font-bold text-base sm:text-lg mb-5">
             شاهد مكائن الجلي والتلميع الاحترافية أثناء العمل في دبي
           </div>
-          <p className="text-[#667085] text-sm sm:text-base">
+          <p className="text-[#6B7280] text-base sm:text-lg leading-relaxed">
             See how our certified Italian machinery, planetary grinders, and diamond polishing pads restore natural stone surfaces with zero dust and factory mirror clarity.
           </p>
         </AnimatedSection>
 
+        {/* Machinery Image Section */}
+        <div className="mb-12">
+          <div className="relative aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl border border-[#E5E7EB]">
+            <Image
+              src={imgs.machineGrinder}
+              alt="Italian Planetary Marble Grinding Machine in Operation"
+              fill
+              className="object-cover"
+              sizes="(max-width:1024px) 100vw, 100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#111827]/80 via-[#111827]/40 to-transparent" />
+            <div className="absolute bottom-8 left-8 right-8">
+              <div className="text-white font-black text-2xl sm:text-3xl mb-2">Italian Planetary Grinding Machine</div>
+              <div className="text-[#60A5FA] text-base font-semibold">Heavy-Duty Equipment · معدات احترافية ثقيلة</div>
+            </div>
+          </div>
+        </div>
+
         {/* Video Grid Layout: Player on Left, Process Selector on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Main Video Player */}
           <div className="lg:col-span-7 flex flex-col">
-            <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-xl border border-[#D9E2EC] bg-[#10233F]">
+            <div className="relative aspect-video w-full rounded-3xl overflow-hidden shadow-2xl border border-[#E5E7EB] bg-[#111827]">
               <video
                 key={activeVideo.id}
                 controls
@@ -139,69 +159,78 @@ export default function MachineryVideoShowcase() {
               </video>
             </div>
 
-            <div className="mt-4 p-5 rounded-2xl bg-[#F7F9FC] border border-[#D9E2EC]">
-              <div className="flex items-center justify-between gap-2 mb-1.5">
-                <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-[#EEF5FF] text-[#1557B0]">
+            <div className="mt-6 p-6 rounded-3xl bg-[#F7F9FC] border border-[#E5E7EB] shadow-lg">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="text-xs font-bold px-3 py-1.5 rounded-lg bg-[#F7F9FC] text-[#D96B27] border border-[#E5E7EB]">
                   {activeVideo.badge}
                 </span>
-                <span className="text-xs font-semibold text-[#667085] flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#1557B0]" /> 100% Genuine Machinery
+                <span className="text-xs font-semibold text-[#6B7280] flex items-center gap-1">
+                  <ShieldCheck className="w-4 h-4 text-[#D96B27]" /> 100% Genuine Machinery
                 </span>
               </div>
-              <h3 className="font-extrabold text-[#10233F] text-lg sm:text-xl">
+              <h3 className="font-extrabold text-[#111827] text-xl sm:text-2xl">
                 {activeVideo.title}
               </h3>
-              <div className="text-xs text-[#1557B0] font-arabic font-semibold mb-2">
+              <div className="text-sm text-[#D96B27] font-arabic font-semibold mb-3">
                 {activeVideo.arTitle}
               </div>
-              <p className="text-xs sm:text-sm text-[#667085] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed">
                 {activeVideo.desc}
               </p>
             </div>
           </div>
 
           {/* Process Selector List */}
-          <div className="lg:col-span-5 flex flex-col gap-2.5">
-            <div className="text-xs font-black uppercase tracking-wider text-[#667085] mb-1 px-1 flex items-center justify-between">
+          <div className="lg:col-span-5 flex flex-col gap-3">
+            <div className="text-xs font-black uppercase tracking-wider text-[#6B7280] mb-2 px-1 flex items-center justify-between">
               <span>Select Process to Watch</span>
-              <span className="text-[#1557B0] font-bold">8 Videos</span>
+              <span className="text-[#D96B27] font-bold">8 Videos</span>
             </div>
 
-            <div className="flex flex-col gap-2 max-h-[480px] overflow-y-auto pr-1">
+            <div className="flex flex-col gap-3 max-h-[520px] overflow-y-auto pr-1">
               {videoItems.map((item) => {
                 const isSelected = activeVideo.id === item.id;
                 return (
                   <button
                     key={item.id}
                     onClick={() => setActiveVideo(item)}
-                    className={`text-left p-3.5 rounded-xl border transition-all flex items-start gap-3 ${
+                    className={`text-left p-4 rounded-2xl border transition-all flex items-start gap-4 ${
                       isSelected
-                        ? "bg-[#10233F] border-[#1557B0] text-white shadow-md scale-[1.01]"
-                        : "bg-white border-[#D9E2EC] text-[#1F2937] hover:border-[#1557B0]/50 hover:bg-[#F7F9FC]"
+                        ? "bg-[#111827] border-[#D96B27] text-white shadow-xl scale-[1.02]"
+                        : "bg-white border-[#E5E7EB] text-[#263238] hover:border-[#D96B27]/50 hover:bg-[#F7F9FC] shadow-md"
                     }`}
                   >
-                    <div
-                      className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5 ${
-                        isSelected ? "bg-[#1557B0] text-white" : "bg-[#EEF5FF] text-[#1557B0]"
-                      }`}
-                    >
-                      <Play className="w-4 h-4 fill-current" />
+                    <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 mt-0.5">
+                      <Image
+                        src={item.poster}
+                        alt={item.badge}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                      />
+                      <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                          isSelected ? "bg-[#D96B27] text-white" : "bg-white/90 text-[#D96B27]"
+                        }`}>
+                          <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-current border-b-[6px] border-b-transparent ml-1" />
+                        </div>
+                      </div>
                     </div>
 
                     <div className="flex-grow min-w-0">
                       <div className="flex items-center justify-between gap-2">
                         <span
                           className={`text-[10px] font-extrabold uppercase tracking-wider ${
-                            isSelected ? "text-[#2F80ED]" : "text-[#1557B0]"
+                            isSelected ? "text-[#D96B27]" : "text-[#D96B27]"
                           }`}
                         >
                           {item.badge}
                         </span>
-                        {isSelected && <Sparkles className="w-3.5 h-3.5 text-[#2F80ED] shrink-0" />}
+                        {isSelected && <Sparkles className="w-4 h-4 text-[#D96B27] shrink-0" />}
                       </div>
                       <div
                         className={`font-bold text-xs sm:text-sm leading-snug truncate ${
-                          isSelected ? "text-white" : "text-[#10233F]"
+                          isSelected ? "text-white" : "text-[#111827]"
                         }`}
                       >
                         {item.title}

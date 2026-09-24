@@ -54,17 +54,17 @@ export default function ProcessTabs() {
             onClick={() => setActiveIdx(idx)}
             className={`p-4 sm:p-5 rounded-2xl border text-left transition-all ${
               activeIdx === idx
-                ? "bg-[#10233F] border-[#1557B0] text-white shadow-lg scale-[1.02]"
-                : "bg-white border-[#D9E2EC] text-[#1F2937] hover:border-[#1557B0]/50"
+                ? "bg-[#111827] border-[#123B6D] text-white shadow-lg scale-[1.02]"
+                : "bg-white border-[#E5E7EB] text-[#1F2937] hover:border-[#123B6D]/50"
             }`}
           >
             <div className="flex items-center justify-between mb-2">
               <span className={`text-xs font-black px-2.5 py-1 rounded-md ${
-                activeIdx === idx ? "bg-[#1557B0] text-white font-extrabold" : "bg-[#EEF5FF] text-[#1557B0]"
+                activeIdx === idx ? "bg-[#123B6D] text-white font-extrabold" : "bg-[#F4F7FF] text-[#123B6D]"
               }`}>
                 Step {s.num}
               </span>
-              {activeIdx === idx && <Sparkles className="w-4 h-4 text-[#2F80ED]" />}
+              {activeIdx === idx && <Sparkles className="w-4 h-4 text-[#FF8C00]" />}
             </div>
             <div className={`font-bold text-sm sm:text-base leading-tight ${activeIdx === idx ? "text-white" : "text-[#1F2937]"}`}>
               {s.title}
@@ -81,27 +81,27 @@ export default function ProcessTabs() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.35 }}
-          className="bg-white rounded-3xl border border-[#D9E2EC] p-6 sm:p-10 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+          className="bg-white rounded-3xl border border-[#E5E7EB] p-6 sm:p-10 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
         >
           {/* Text details */}
           <div className="lg:col-span-7">
-            <div className="text-[#1557B0] text-xs font-bold uppercase tracking-widest mb-1">
+            <div className="text-[#FF8C00] text-xs font-bold uppercase tracking-widest mb-1">
               Step {cur.num} of 04
             </div>
-            <h3 className="text-2xl sm:text-3xl font-black text-[#10233F] mb-2">
+            <h3 className="text-2xl sm:text-3xl font-black text-[#111827] mb-2">
               {cur.title}
             </h3>
             <p className="text-[#2F80ED] font-semibold text-sm mb-4">
               {cur.subtitle}
             </p>
-            <p className="text-[#667085] text-base leading-relaxed mb-6">
+            <p className="text-[#6B7280] text-base leading-relaxed mb-6">
               {cur.desc}
             </p>
 
             <div className="space-y-3 mb-6">
               {cur.highlights.map((h) => (
                 <div key={h} className="flex items-center gap-2.5 text-sm font-semibold text-[#1F2937]">
-                  <CheckCircle2 className="w-4 h-4 text-[#1557B0] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#FF8C00] shrink-0" />
                   <span>{h}</span>
                 </div>
               ))}
@@ -109,14 +109,14 @@ export default function ProcessTabs() {
 
             <button
               onClick={() => setActiveIdx((activeIdx + 1) % steps.length)}
-              className="inline-flex items-center gap-2 text-xs font-bold text-[#1557B0] hover:underline"
+              className="inline-flex items-center gap-2 text-xs font-bold text-[#FF8C00] hover:underline"
             >
               Next Step: {steps[(activeIdx + 1) % steps.length].title} <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
 
           {/* Image */}
-          <div className="lg:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-[#D9E2EC]">
+          <div className="lg:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB]">
             <Image
               src={cur.image}
               alt={`${cur.title} - Professional Marble Restoration in Dubai`}
@@ -124,7 +124,7 @@ export default function ProcessTabs() {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#10233F]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/60 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-bold">
               Italian Certified Equipment &bull; GridsPro International
             </div>

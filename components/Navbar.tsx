@@ -7,6 +7,7 @@ import { ChevronDown, Menu, X, Phone, CalendarCheck, MessageCircle, Sparkles, Ar
 import { servicesData } from "@/data/services";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollProgress from "./ScrollProgress";
+import SearchBar from "./SearchBar";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -38,8 +39,8 @@ export default function Navbar() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#10233F]/98 backdrop-blur-xl shadow-xl border-b border-white/10"
-            : "bg-[#10233F] border-b border-white/10"
+            ? "bg-white/98 backdrop-blur-xl shadow-xl border-b border-[#E5E7EB]"
+            : "bg-white border-b border-[#E5E7EB]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 flex items-center justify-between gap-4 lg:gap-6">
@@ -48,7 +49,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3.5 shrink-0 group py-1.5">
             <div className="relative flex items-center">
               <Image
-                src="/logo-original.png"
+                src="/logo_preview.png"
                 alt="GridsPro International Logo"
                 width={260}
                 height={88}
@@ -71,43 +72,43 @@ export default function Navbar() {
             <Link
               href="/"
               className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all ${
-                isActive("/") ? "text-white font-bold" : "text-slate-200 hover:text-white hover:bg-white/5"
+                isActive("/") ? "text-[#123B6D] font-bold" : "text-[#263238] hover:text-[#123B6D] hover:bg-[#F7F9FC]"
               }`}
             >
               Home
               {isActive("/") && (
-                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#2F80ED]" />
+                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#123B6D]" />
               )}
             </Link>
 
             <Link
               href="/about"
-              className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all ${
-                isActive("/about") ? "text-white font-bold" : "text-slate-200 hover:text-white hover:bg-white/5"
+              className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all z-10 ${
+                isActive("/about") ? "text-[#123B6D] font-bold" : "text-[#263238] hover:text-[#123B6D] hover:bg-[#F7F9FC]"
               }`}
             >
               About
               {isActive("/about") && (
-                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#2F80ED]" />
+                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#123B6D]" />
               )}
             </Link>
 
             {/* SERVICES DROPDOWN IN PRIME POSITION */}
             <div
-              className="relative"
+              className="relative z-20"
               onMouseEnter={() => setDropOpen(true)}
               onMouseLeave={() => setDropOpen(false)}
             >
               <Link
                 href="/services"
                 className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all flex items-center gap-1 ${
-                  svcActive ? "text-white font-bold" : "text-slate-200 hover:text-white hover:bg-white/5"
+                  svcActive ? "text-[#123B6D] font-bold" : "text-[#263238] hover:text-[#123B6D] hover:bg-[#F7F9FC]"
                 }`}
               >
                 <span>Services</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropOpen ? "rotate-180 text-white" : "text-slate-400"}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropOpen ? "rotate-180 text-[#123B6D]" : "text-[#6B7280]"}`} />
                 {svcActive && (
-                  <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#2F80ED]" />
+                  <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#123B6D]" />
                 )}
               </Link>
 
@@ -118,17 +119,17 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -4, scale: 0.98 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 w-80 bg-[#10233F] border border-white/15 rounded-2xl p-2.5 shadow-2xl backdrop-blur-2xl z-50"
+                    className="absolute top-full left-0 w-80 bg-white border border-[#E5E7EB] rounded-2xl p-2.5 shadow-2xl backdrop-blur-2xl z-50"
                   >
                     <Link
                       href="/services"
-                      className="block px-3 py-2 text-[11px] font-bold text-white uppercase tracking-wider border-b border-white/10 mb-1 flex items-center justify-between hover:text-[#2F80ED] transition-colors"
+                      className="block px-3 py-2 text-[11px] font-bold text-[#263238] uppercase tracking-wider border-b border-[#E5E7EB] mb-1 flex items-center justify-between hover:text-[#123B6D] transition-colors"
                     >
                       <span className="flex items-center gap-1.5">
-                        <Sparkles className="w-3 h-3 text-[#2F80ED]" />
+                        <Sparkles className="w-3 h-3 text-[#123B6D]" />
                         All Marble Services
                       </span>
-                      <span className="font-arabic text-[11px] normal-case text-slate-300">كافة الخدمات ←</span>
+                      <span className="font-arabic text-[11px] normal-case text-[#6B7280]">كافة الخدمات ←</span>
                     </Link>
                     {servicesData.map((s) => (
                       <Link
@@ -136,15 +137,15 @@ export default function Navbar() {
                         href={`/services/${s.slug}`}
                         className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-[13px] transition-colors ${
                           pathname === `/services/${s.slug}`
-                            ? "bg-[#2F80ED]/20 text-[#2F80ED] font-bold border border-[#2F80ED]/30"
-                            : "text-slate-200 hover:bg-white/5 hover:text-white font-medium"
+                            ? "bg-[#F7F9FC] text-[#123B6D] font-bold border border-[#123B6D]/30"
+                            : "text-[#263238] hover:bg-[#F7F9FC] hover:text-[#123B6D] font-medium"
                         }`}
                       >
                         <span className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#2F80ED] shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#123B6D] shrink-0" />
                           {s.title}
                         </span>
-                        <span className="text-[11px] text-slate-400 font-arabic font-normal">{s.arTitle}</span>
+                        <span className="text-[11px] text-[#6B7280] font-arabic font-normal">{s.arTitle}</span>
                       </Link>
                     ))}
                   </motion.div>
@@ -155,69 +156,74 @@ export default function Navbar() {
             <Link
               href="/gallery"
               className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all ${
-                isActive("/gallery") ? "text-white font-bold" : "text-slate-200 hover:text-white hover:bg-white/5"
+                isActive("/gallery") ? "text-[#123B6D] font-bold" : "text-[#263238] hover:text-[#123B6D] hover:bg-[#F7F9FC]"
               }`}
             >
               Gallery
               {isActive("/gallery") && (
-                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#2F80ED]" />
+                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#123B6D]" />
               )}
             </Link>
 
             <Link
               href="/reviews"
               className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all ${
-                isActive("/reviews") ? "text-white font-bold" : "text-slate-200 hover:text-white hover:bg-white/5"
+                isActive("/reviews") ? "text-[#123B6D] font-bold" : "text-[#263238] hover:text-[#123B6D] hover:bg-[#F7F9FC]"
               }`}
             >
               Reviews
               {isActive("/reviews") && (
-                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#2F80ED]" />
+                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#123B6D]" />
               )}
             </Link>
 
             <Link
               href="/faqs"
               className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all ${
-                isActive("/faqs") ? "text-white font-bold" : "text-slate-200 hover:text-white hover:bg-white/5"
+                isActive("/faqs") ? "text-[#123B6D] font-bold" : "text-[#263238] hover:text-[#123B6D] hover:bg-[#F7F9FC]"
               }`}
             >
               FAQs
               {isActive("/faqs") && (
-                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#2F80ED]" />
+                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#123B6D]" />
               )}
             </Link>
 
             <Link
               href="/blog"
               className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all ${
-                isActive("/blog") ? "text-white font-bold" : "text-slate-200 hover:text-white hover:bg-white/5"
+                isActive("/blog") ? "text-[#123B6D] font-bold" : "text-[#263238] hover:text-[#123B6D] hover:bg-[#F7F9FC]"
               }`}
             >
               Blog
               {isActive("/blog") && (
-                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#2F80ED]" />
+                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#123B6D]" />
               )}
             </Link>
 
             <Link
               href="/contact"
               className={`relative px-3 py-2 rounded-lg text-[13.5px] font-semibold transition-all ${
-                isActive("/contact") ? "text-white font-bold" : "text-slate-200 hover:text-white hover:bg-white/5"
+                isActive("/contact") ? "text-[#123B6D] font-bold" : "text-[#263238] hover:text-[#123B6D] hover:bg-[#F7F9FC]"
               }`}
             >
               Contact
               {isActive("/contact") && (
-                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#2F80ED]" />
+                <motion.span layoutId="nav-active" className="absolute bottom-0 left-2.5 right-2.5 h-0.5 rounded-full bg-[#123B6D]" />
               )}
             </Link>
           </nav>
 
-          {/* DESKTOP CALL & BOOKING CTAS (Single-Line, No Line-Break) */}
+          {/* SEARCH BAR */}
+          <div className="hidden lg:flex items-center shrink-0">
+            <SearchBar />
+          </div>
+
+          {/* DESKTOP CALL & BOOKING CTAs (Single-Line, No Line-Break) */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <a
               href="tel:+971522774953"
-              className="whitespace-nowrap flex items-center gap-2 text-xs font-bold text-white bg-[#1557B0] hover:bg-[#10233F] px-3.5 py-2.5 rounded-xl border border-white/20 transition-colors shadow-sm"
+              className="whitespace-nowrap flex items-center gap-2 text-xs font-bold text-white bg-[#D96B27] hover:bg-[#B8521A] px-3.5 py-2.5 rounded-xl border border-[#D96B27]/20 transition-colors shadow-sm"
             >
               <Phone className="w-3.5 h-3.5 text-white/90 shrink-0" />
               <span>+971 52 277 4953</span>
@@ -225,7 +231,7 @@ export default function Navbar() {
 
             <Link
               href="/booking"
-              className="whitespace-nowrap bg-[#2F80ED] hover:bg-[#1557B0] text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition-all items-center gap-2 flex group hover:scale-[1.02]"
+              className="whitespace-nowrap bg-[#123B6D] hover:bg-[#0B1F33] text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow transition-all items-center gap-2 flex group hover:scale-[1.02]"
             >
               <CalendarCheck className="w-4 h-4 shrink-0" />
               <span>Book Inspection</span>
@@ -236,10 +242,10 @@ export default function Navbar() {
           {/* MOBILE TOGGLE */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2.5 text-white rounded-xl bg-white/10 border border-white/15 focus:outline-none"
+            className="lg:hidden p-2.5 text-[#263238] rounded-xl bg-[#F7F9FC] border border-[#E5E7EB] focus:outline-none"
             aria-label="Toggle navigation menu"
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-white" />}
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-[#263238]" />}
           </button>
         </div>
 
@@ -251,48 +257,53 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.22, ease: "easeInOut" }}
-              className="lg:hidden bg-[#10233F] border-t border-white/10 overflow-y-auto max-h-[85vh] shadow-2xl"
+              className="lg:hidden bg-white border-t border-[#E5E7EB] overflow-y-auto max-h-[85vh] shadow-2xl"
             >
               <div className="px-5 py-6 flex flex-col gap-1.5">
+                {/* Mobile Search */}
+                <div className="mb-4">
+                  <SearchBar isMobile={true} />
+                </div>
+
                 <Link
                   href="/"
                   onClick={() => setMobileOpen(false)}
                   className={`py-3 px-4 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
-                    isActive("/") ? "text-white bg-[#2F80ED]/20 border border-[#2F80ED]/30" : "text-slate-200 hover:bg-white/5"
+                    isActive("/") ? "text-[#123B6D] bg-[#F7F9FC] border border-[#123B6D]/30" : "text-[#263238] hover:bg-[#F7F9FC]"
                   }`}
                 >
                   <span>Home</span>
-                  <span className="text-xs font-arabic text-slate-400 font-normal">الرئيسية</span>
+                  <span className="text-xs font-arabic text-[#6B7280] font-normal">الرئيسية</span>
                 </Link>
 
                 <Link
                   href="/about"
                   onClick={() => setMobileOpen(false)}
                   className={`py-3 px-4 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
-                    isActive("/about") ? "text-white bg-[#2F80ED]/20 border border-[#2F80ED]/30" : "text-slate-200 hover:bg-white/5"
+                    isActive("/about") ? "text-[#123B6D] bg-[#F7F9FC] border border-[#123B6D]/30" : "text-[#263238] hover:bg-[#F7F9FC]"
                   }`}
                 >
                   <span>About Us</span>
-                  <span className="text-xs font-arabic text-slate-400 font-normal">من نحن</span>
+                  <span className="text-xs font-arabic text-[#6B7280] font-normal">من نحن</span>
                 </Link>
 
                 {/* Mobile Services Accordion */}
-                <div className="border border-white/15 rounded-xl overflow-hidden my-1">
+                <div className="border border-[#E5E7EB] rounded-xl overflow-hidden my-1">
                   <button
                     onClick={() => setServicesAccordionOpen(!servicesAccordionOpen)}
-                    className="w-full py-3 px-4 flex items-center justify-between text-base font-bold text-white bg-white/5"
+                    className="w-full py-3 px-4 flex items-center justify-between text-base font-bold text-[#263238] bg-[#F7F9FC]"
                   >
                     <span className="flex items-center gap-2">
-                      Our Services <span className="text-xs font-arabic text-[#D0D5DD] font-normal">· خدماتنا</span>
+                      Our Services <span className="text-xs font-arabic text-[#9CA3AF] font-normal">· خدماتنا</span>
                     </span>
-                    <ChevronDown className={`w-4 h-4 text-white transition-transform ${servicesAccordionOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`w-4 h-4 text-[#263238] transition-transform ${servicesAccordionOpen ? "rotate-180" : ""}`} />
                   </button>
                   {servicesAccordionOpen && (
-                    <div className="p-2 space-y-1 bg-[#102A56]">
+                    <div className="p-2 space-y-1 bg-[#F7F9FC]">
                       <Link
                         href="/services"
                         onClick={() => setMobileOpen(false)}
-                        className="block py-2 px-3 text-xs font-bold text-[#2F80ED] uppercase tracking-wider"
+                        className="block py-2 px-3 text-xs font-bold text-[#123B6D] uppercase tracking-wider"
                       >
                         All Services Overview &rarr;
                       </Link>
@@ -301,7 +312,7 @@ export default function Navbar() {
                           key={s.slug}
                           href={`/services/${s.slug}`}
                           onClick={() => setMobileOpen(false)}
-                          className="block py-2 px-3 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-white/5"
+                          className="block py-2 px-3 rounded-lg text-sm text-[#263238] hover:text-[#123B6D] hover:bg-white"
                         >
                           &bull; {s.title}
                         </Link>
@@ -314,62 +325,62 @@ export default function Navbar() {
                   href="/gallery"
                   onClick={() => setMobileOpen(false)}
                   className={`py-3 px-4 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
-                    isActive("/gallery") ? "text-white bg-[#2F80ED]/20 border border-[#2F80ED]/30" : "text-slate-200 hover:bg-white/5"
+                    isActive("/gallery") ? "text-[#123B6D] bg-[#F7F9FC] border border-[#123B6D]/30" : "text-[#263238] hover:bg-[#F7F9FC]"
                   }`}
                 >
                   <span>Gallery</span>
-                  <span className="text-xs font-arabic text-slate-400 font-normal">معرض الأعمال</span>
+                  <span className="text-xs font-arabic text-[#6B7280] font-normal">معرض الأعمال</span>
                 </Link>
 
                 <Link
                   href="/reviews"
                   onClick={() => setMobileOpen(false)}
                   className={`py-3 px-4 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
-                    isActive("/reviews") ? "text-white bg-[#2F80ED]/20 border border-[#2F80ED]/30" : "text-slate-200 hover:bg-white/5"
+                    isActive("/reviews") ? "text-[#123B6D] bg-[#F7F9FC] border border-[#123B6D]/30" : "text-[#263238] hover:bg-[#F7F9FC]"
                   }`}
                 >
                   <span>Reviews</span>
-                  <span className="text-xs font-arabic text-slate-400 font-normal">التقييمات</span>
+                  <span className="text-xs font-arabic text-[#6B7280] font-normal">التقييمات</span>
                 </Link>
 
                 <Link
                   href="/faqs"
                   onClick={() => setMobileOpen(false)}
                   className={`py-3 px-4 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
-                    isActive("/faqs") ? "text-white bg-[#2F80ED]/20 border border-[#2F80ED]/30" : "text-slate-200 hover:bg-white/5"
+                    isActive("/faqs") ? "text-[#123B6D] bg-[#F7F9FC] border border-[#123B6D]/30" : "text-[#263238] hover:bg-[#F7F9FC]"
                   }`}
                 >
                   <span>FAQs</span>
-                  <span className="text-xs font-arabic text-slate-400 font-normal">الأسئلة الشائعة</span>
+                  <span className="text-xs font-arabic text-[#6B7280] font-normal">الأسئلة الشائعة</span>
                 </Link>
 
                 <Link
                   href="/blog"
                   onClick={() => setMobileOpen(false)}
                   className={`py-3 px-4 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
-                    isActive("/blog") ? "text-white bg-[#2F80ED]/20 border border-[#2F80ED]/30" : "text-slate-200 hover:bg-white/5"
+                    isActive("/blog") ? "text-[#123B6D] bg-[#F7F9FC] border border-[#123B6D]/30" : "text-[#263238] hover:bg-[#F7F9FC]"
                   }`}
                 >
                   <span>Blog</span>
-                  <span className="text-xs font-arabic text-slate-400 font-normal">المدونة</span>
+                  <span className="text-xs font-arabic text-[#6B7280] font-normal">المدونة</span>
                 </Link>
 
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
                   className={`py-3 px-4 rounded-xl text-base font-bold transition-all flex items-center justify-between ${
-                    isActive("/contact") ? "text-white bg-[#2F80ED]/20 border border-[#2F80ED]/30" : "text-slate-200 hover:bg-white/5"
+                    isActive("/contact") ? "text-[#123B6D] bg-[#F7F9FC] border border-[#123B6D]/30" : "text-[#263238] hover:bg-[#F7F9FC]"
                   }`}
                 >
                   <span>Contact</span>
-                  <span className="text-xs font-arabic text-slate-400 font-normal">تواصل معنا</span>
+                  <span className="text-xs font-arabic text-[#6B7280] font-normal">تواصل معنا</span>
                 </Link>
 
                 {/* Mobile Action Buttons */}
-                <div className="pt-4 mt-2 border-t border-white/15 flex flex-col gap-2.5">
+                <div className="pt-4 mt-2 border-t border-[#E5E7EB] flex flex-col gap-2.5">
                   <a
                     href="tel:+971522774953"
-                    className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-white/20 text-white font-bold text-sm bg-[#1557B0] shadow hover:bg-[#10233F]"
+                    className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-[#D96B27]/20 text-white font-bold text-sm bg-[#D96B27] shadow hover:bg-[#B8521A]"
                   >
                     <Phone className="w-4 h-4 text-white" /> Call Hotline: +971 52 277 4953
                   </a>
@@ -384,7 +395,7 @@ export default function Navbar() {
                   <Link
                     href="/booking"
                     onClick={() => setMobileOpen(false)}
-                    className="bg-[#2F80ED] hover:bg-[#1557B0] text-white font-bold text-center py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm shadow-md"
+                    className="bg-[#123B6D] hover:bg-[#0B1F33] text-white font-bold text-center py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm shadow-md"
                   >
                     <CalendarCheck className="w-4 h-4" /> Book Free Inspection · حجز معاينة مجانية
                   </Link>

@@ -22,7 +22,7 @@ export default function PageHeader({
   image,
 }: PageHeaderProps) {
   return (
-    <div className="relative py-16 sm:py-24 md:py-28 bg-[#10233F] text-white overflow-hidden shadow-xl">
+    <div className="relative py-16 sm:py-24 md:py-28 text-white overflow-hidden shadow-xl">
       <div className="absolute inset-0 z-0">
         <Image
           src={image}
@@ -32,7 +32,7 @@ export default function PageHeader({
           sizes="100vw"
           className="object-cover object-center opacity-35"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#10233F] via-[#10233F]/85 to-[#10233F]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pb-2">
@@ -42,8 +42,8 @@ export default function PageHeader({
           transition={{ duration: 0.55 }}
         >
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-3 sm:mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2F80ED]" />
-            <Link href="/" className="hover:underline text-[#2F80ED]">Home</Link>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#123B6D]" />
+            <Link href="/" className="hover:underline text-[#123B6D]">Home</Link>
             <span>&bull;</span>
             <span className="text-[#D0D5DD]">{breadcrumb}</span>
           </div>
@@ -53,20 +53,20 @@ export default function PageHeader({
           </h1>
 
           {arTitle && (
-            <div className="text-[#C89B3C] text-xs sm:text-sm md:text-base font-semibold tracking-wide mb-2 sm:mb-3">
+            <div className="text-[#D96B27] text-xs sm:text-sm md:text-base font-semibold tracking-wide mb-2 sm:mb-3">
               {arTitle}
             </div>
           )}
 
           {subtitle && (
-            <p className="text-[#D0D5DD] text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow px-2">
+            <p className="text-[#9CA3AF] text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow px-2">
               {subtitle}
             </p>
           )}
         </motion.div>
       </div>
 
-      <SectionDivider type="peak-down" color="#F7F9FC" position="bottom" height={32} />
+      <SectionDivider type="peak-down" color="#F4F7FF" position="bottom" height={32} />
     </div>
   );
 }

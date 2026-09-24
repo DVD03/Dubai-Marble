@@ -14,12 +14,12 @@ interface GalleryItem {
 }
 
 const items: GalleryItem[] = [
-  { src: imgs.gal1, title: "Italian Carrara Floor Polishing",     location: "Dubai Marina Villa",   category: "floor"    },
-  { src: imgs.gal2, title: "Hotel Lobby Diamond Restoration",     location: "Downtown Hotel",        category: "floor"    },
-  { src: imgs.gal3, title: "Kitchen Island Acid Etch Removal",    location: "Palm Jumeirah Penthouse",category: "counter"  },
-  { src: imgs.gal4, title: "Crema Marfil Crack Resin Repair",     location: "Emirates Hills",        category: "repair"   },
-  { src: imgs.gal5, title: "Deep Cleaning & Grout Rejuvenation",  location: "JBR Apartment",         category: "cleaning" },
-  { src: imgs.gal6, title: "Travertine Polishing & Sealing",      location: "Arabian Ranches Villa", category: "floor"    },
+  { src: imgs.gal1, title: "Italian Carrara Floor Polishing",     location: "Dubai Marina Villa",        category: "floor"    },
+  { src: imgs.gal2, title: "Hotel Lobby Diamond Restoration",     location: "Downtown Hotel",           category: "floor"    },
+  { src: imgs.gal3, title: "Kitchen Island Acid Etch Removal",    location: "Palm Jumeirah Penthouse",   category: "counter"  },
+  { src: imgs.gal4, title: "Crema Marfil Crack Resin Repair",     location: "Emirates Hills",           category: "repair"   },
+  { src: imgs.gal5, title: "Deep Cleaning & Grout Rejuvenation",  location: "JBR Apartment",            category: "cleaning" },
+  { src: imgs.gal6, title: "Travertine Polishing & Sealing",      location: "Arabian Ranches Villa",    category: "floor"    },
 ];
 
 const filters = [
@@ -46,8 +46,8 @@ export default function GalleryView() {
             onClick={() => setActive(f.id)}
             className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
               active === f.id
-                ? "bg-[#2F80ED] text-white shadow-md scale-105 font-bold"
-                : "bg-white text-[#667085] border border-[#D9E2EC] hover:border-[#1557B0] hover:text-[#1557B0]"
+                ? "bg-[#123B6D] text-white shadow-md scale-105 font-bold"
+                : "bg-white text-[#6B7280] border border-[#E5E7EB] hover:border-[#123B6D] hover:text-[#123B6D]"
             }`}
           >
             {f.label}
@@ -67,13 +67,13 @@ export default function GalleryView() {
               exit={{  opacity: 0, scale: .94 }}
               transition={{ duration: .35, delay: i * 0.07 }}
               onClick={() => setLightbox(item)}
-              className="group cursor-pointer rounded-2xl overflow-hidden border border-[#D9E2EC] shadow-sm hover:shadow-xl transition-shadow"
+              className="group cursor-pointer rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-sm hover:shadow-xl transition-shadow"
             >
               <div className="img-card aspect-[4/3] relative">
                 <Image src={item.src} alt={`${item.title} - ${item.location} Marble Restoration Dubai`} fill className="object-cover" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" />
                 <div className="img-card-overlay" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="bg-[#10233F]/70 backdrop-blur-sm p-3 rounded-full">
+                  <div className="bg-[#111827]/70 backdrop-blur-sm p-3 rounded-full">
                     <ZoomIn className="w-6 h-6 text-white" />
                   </div>
                 </div>
@@ -84,8 +84,8 @@ export default function GalleryView() {
                 </div>
               </div>
               <div className="p-4 bg-white">
-                <div className="font-bold text-[#10233F] text-[15px]">{item.title}</div>
-                <div className="text-xs text-[#98A2B3] font-semibold mt-1">{item.location}</div>
+                <div className="font-bold text-[#1F2937] text-[15px]">{item.title}</div>
+                <div className="text-xs text-[#6B7280] font-semibold mt-1">{item.location}</div>
               </div>
             </motion.div>
           ))}
@@ -99,14 +99,14 @@ export default function GalleryView() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] bg-dark/95 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[9999] bg-[#111827]/95 flex items-center justify-center p-4"
             onClick={() => setLightbox(null)}
           >
             <motion.div
               initial={{ scale: .88 }}
               animate={{ scale: 1 }}
               exit={{ scale: .88 }}
-              className="relative max-w-3xl w-full bg-dark-card rounded-3xl overflow-hidden shadow-2xl border border-gold/25"
+              className="relative max-w-3xl w-full bg-[#1F2937] rounded-3xl overflow-hidden shadow-2xl border border-[#FF8C00]/25"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative aspect-[16/10]">

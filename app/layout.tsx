@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   keywords: ["GridsPro International", "Dubai Marble Polishing", "Marble Restoration Dubai", "Marble Cleaning UAE", "Floor Grinding Dubai", "Crystallization Dubai"],
   authors: [{ name: "GridsPro International" }],
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo_preview.png",
+    apple: "/logo_preview.png",
   },
   openGraph: {
     title: "GridsPro International | Dubai Marble Polishing & Restoration",

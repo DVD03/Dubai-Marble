@@ -27,7 +27,7 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
 
 export default function StatsCounter() {
   return (
-    <section className="py-16 bg-[#F7F9FC] border-y border-[#D9E2EC]">
+    <section className="py-16 bg-[#F4F7FF] border-y border-[#E5E7EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10">
           {[
@@ -37,16 +37,16 @@ export default function StatsCounter() {
             { target: 50,   suffix: "+", label: "5-Star Hotels",     ar: "فندق 5 نجوم" },
           ].map(({ target, suffix, label, ar }, i) => (
             <AnimatedSection key={label} delay={i * 0.1} className="text-center">
-              <div className="text-4xl sm:text-5xl font-black text-[#10233F] leading-none mb-2 tabular-nums">
+              <div className="text-4xl sm:text-5xl font-black text-[#111827] leading-none mb-2 tabular-nums">
                 <Counter target={target} suffix={suffix} />
               </div>
-              <div className="text-xs sm:text-sm font-semibold text-[#667085] uppercase tracking-wider">
+              <div className="text-xs sm:text-sm font-semibold text-[#6B7280] uppercase tracking-wider">
                 {label}
               </div>
-              <div className="text-[11px] text-[#98A2B3] font-arabic mt-0.5">
+              <div className="text-[11px] text-[#9CA3AF] font-arabic mt-0.5">
                 {ar}
               </div>
-              <div className="w-10 h-[3px] bg-[#1557B0] mx-auto mt-3 rounded-full" />
+              <div className="w-10 h-[3px] bg-[#FF8C00] mx-auto mt-3 rounded-full" />
             </AnimatedSection>
           ))}
         </div>

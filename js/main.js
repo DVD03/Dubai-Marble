@@ -13,14 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileClose.addEventListener('click', () => mobileNav.classList.remove('open'));
   }
 
-  // Sticky Navbar shadow
+  // Sticky Navbar Adaptation on Scroll
   const navbar = document.querySelector('.navbar');
   if (navbar) {
-    window.addEventListener('scroll', () => {
-      navbar.style.boxShadow = window.scrollY > 20
-        ? '0 4px 30px rgba(0, 0, 0, 0.5)'
-        : '0 4px 25px rgba(0, 0, 0, 0.35)';
-    }, { passive: true });
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
   }
 
   // Stats Counter Animation

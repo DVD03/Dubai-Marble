@@ -14,7 +14,7 @@ export const projectsData: Project[] = [
     category: "floor",
     categoryLabel: "Floor Polishing",
     icon: "💎",
-    gradient: "from-[#1b1338] to-[#34206e]"
+    gradient: "from-[#123B6D] to-[#3333FF]"
   },
   {
     title: "Hotel Lobby Diamond Restoration",
@@ -22,7 +22,7 @@ export const projectsData: Project[] = [
     category: "floor",
     categoryLabel: "Floor Polishing",
     icon: "⚙️",
-    gradient: "from-[#0e243a] to-[#144973]"
+    gradient: "from-[#0000CC] to-[#123B6D]"
   },
   {
     title: "Kitchen Island Acid Etch Removal",
@@ -30,7 +30,7 @@ export const projectsData: Project[] = [
     category: "counter",
     categoryLabel: "Countertops",
     icon: "🔧",
-    gradient: "from-[#381f12] to-[#6e3a1f]"
+    gradient: "from-[#FF8C00] to-[#FFA500]"
   },
   {
     title: "Crema Marfil Crack Resin Repair",
@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
     category: "repair",
     categoryLabel: "Crack Repair",
     icon: "🔨",
-    gradient: "from-[#381223] to-[#6e2044]"
+    gradient: "from-[#FF8C00] to-[#CC7000]"
   },
   {
     title: "Deep Cleaning & Grout Rejuvenation",
@@ -46,7 +46,7 @@ export const projectsData: Project[] = [
     category: "cleaning",
     categoryLabel: "Deep Cleaning",
     icon: "🧹",
-    gradient: "from-[#112138] to-[#204575]"
+    gradient: "from-[#0000CC] to-[#123B6D]"
   },
   {
     title: "Travertine Polishing & Sealing",
@@ -54,6 +54,6 @@ export const projectsData: Project[] = [
     category: "floor",
     categoryLabel: "Floor Polishing",
     icon: "✨",
-    gradient: "from-[#193116] to-[#2d5e27]"
+    gradient: "from-[#111827] to-[#1F2937]"
   }
 ];
