@@ -41,9 +41,9 @@ export default function FaqsPage() {
                 className="bg-[#123B6D] hover:bg-[#0000CC] text-white font-bold text-xs px-6 py-3 rounded-lg shadow-sm flex items-center gap-2 transition-colors">
                 <Mail className="w-4 h-4" /> Contact Us | تواصل معنا
               </Link>
-              <a href="tel:+971508164087"
+              <a href="tel:+971522774953"
                 className="border border-[#E5E7EB] bg-[#F4F7FF] text-[#1F2937] font-semibold text-xs px-6 py-3 rounded-xl hover:border-[#123B6D] hover:text-[#123B6D] transition-colors flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#123B6D]" /> +971 50 816 4087
+                <Phone className="w-4 h-4 text-[#123B6D]" /> +971 52 277 4953
               </a>
             </div>
           </div>

@@ -114,12 +114,39 @@ const blogArticles = [
 ];
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Dubai Marble Polishing - Professional Stone Restoration Services",
+    "description": "Expert marble polishing, restoration, grinding, sealing & cleaning services in Dubai. 16+ years experience, 5-star hotel quality, free inspection.",
+    "url": "https://dubaimarblepolishing.ae",
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Marble Polishing Services",
+      "description": "Professional marble polishing and restoration services in Dubai",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "GridsPro International - Dubai Marble Polishing",
+        "telephone": "+971522774953",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        }
+      }
+    }
+  };
+
   return (
     <div className="bg-[#F7F9FC] text-[#263238]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ─────────────────────────────────────────────────────────────
           1. HERO SECTION (Full Visibility Video Background with Glassmorphic Card)
          ───────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[95vh] flex items-center overflow-hidden border-b border-[#E5E7EB]">
+      <header className="relative min-h-[95vh] flex items-center overflow-hidden border-b border-[#E5E7EB]">
         {/* Full-Visibility Background Video */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
@@ -156,7 +183,7 @@ export default function HomePage() {
                 </span>
                 <br />
                 <span className="text-2xl sm:text-3xl lg:text-[28px] font-bold text-white mt-3 block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-                  5-Star Hotel, Public &amp; Private Marble Maintenance &amp; Cleaning Services in Dubai
+                  Professional Marble Polishing &amp; Cleaning Services in Dubai
                 </span>
                 <span className="text-xl sm:text-2xl font-bold text-[#F7F9FC] font-arabic mt-2 block leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                   خدمات تلميع وصيانة الرخام في دبي للفنادق 5 نجوم والممتلكات الخاصة والعامة
@@ -208,16 +235,16 @@ export default function HomePage() {
             <BookingForm isDark={false} mode="hero" />
           </motion.div>
         </div>
-      </section>
+      </header>
 
       {/* ─────────────────────────────────────────────────────────────
           1.2. OUR WORK - PREMIUM MASONRY GALLERY
          ───────────────────────────────────────────────────────────── */}
-      <section className="relative py-24 sm:py-32 bg-white overflow-hidden">
+      <section aria-labelledby="our-work-heading" className="relative py-24 sm:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel variant="minimal" arabic="أعمالنا">OUR WORK</SectionLabel>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#111827] mb-4 leading-tight">
+            <h2 id="our-work-heading" className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#111827] mb-4 leading-tight">
               Every Surface. Beautifully Restored.
             </h2>
             <div className="text-[#D96B27] font-arabic font-bold text-lg sm:text-xl mb-5">
@@ -308,7 +335,7 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           2. ABOUT US SECTION (4 Feature Boxes + 16 Years Counter Card)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-[#F7F9FC] overflow-hidden">
+      <section aria-labelledby="about-us-heading" className="py-20 sm:py-28 bg-[#F7F9FC] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Col: Enhanced Visual with Image */}
@@ -341,7 +368,7 @@ export default function HomePage() {
             {/* Right Col: Features - More compact */}
             <AnimatedSection direction="right" className="lg:col-span-7 order-1 lg:order-2">
               <SectionLabel arabic="نبذة عنا">About Us</SectionLabel>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3 leading-tight">
+              <h2 id="about-us-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3 leading-tight">
                 Delivering Quality, Reliability &amp; Complete Customer Satisfaction
               </h2>
               <div className="text-[#D96B27] font-bold font-arabic text-base sm:text-lg mb-6">
@@ -409,12 +436,12 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           3. CORE SERVICES (6 Service Cards + CTA Bar)
          ───────────────────────────────────────────────────────────── */}
-      <section className="relative py-24 sm:py-32 bg-[#F7F9FC] border-y border-[#E5E7EB]">
+      <section aria-labelledby="services-heading" className="relative py-24 sm:py-32 bg-[#F7F9FC] border-y border-[#E5E7EB]">
         <SectionDivider type="peak-up" color="#F7F9FC" position="top" height={36} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel variant="minimal" arabic="خدماتنا">OUR SERVICES</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3 leading-tight">
+            <h2 id="services-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3 leading-tight">
               Professional Marble Polishing &amp; Cleaning Services in Dubai
             </h2>
             <div className="text-[#D96B27] font-arabic font-bold text-base sm:text-lg mb-5">
@@ -498,11 +525,11 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           4. WHY CHOOSE US (8 Icon Feature Grid)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-24 sm:py-32 bg-[#F7F9FC] overflow-hidden">
+      <section aria-labelledby="why-choose-us-heading" className="py-24 sm:py-32 bg-[#F7F9FC] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel variant="minimal" arabic="لماذا تختارنا">WHY CHOOSE US</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3 leading-tight">
+            <h2 id="why-choose-us-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3 leading-tight">
               Professional marble polishing and cleaning services in Dubai for a clean, glossy, and restored finish.
             </h2>
             <div className="text-[#D96B27] font-arabic font-bold text-base sm:text-lg mb-5">
@@ -599,12 +626,12 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           5. FEATURED WORKS / PROJECTS (4-Column Clean Gallery Grid)
          ───────────────────────────────────────────────────────────── */}
-      <section className="relative py-24 sm:py-32 bg-white text-[#263238] border-y border-[#E5E7EB]">
+      <section aria-labelledby="projects-heading" className="relative py-24 sm:py-32 bg-white text-[#263238] border-y border-[#E5E7EB]">
         <SectionDivider type="peak-up" color="#FFFFFF" position="top" height={36} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel variant="minimal" arabic="معرض المشاريع">OUR PROJECTS</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3 text-[#111827]">
+            <h2 id="projects-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3 text-[#111827]">
               Featured Works &amp; Transformations
             </h2>
             <div className="text-[#D96B27] font-arabic font-bold text-base sm:text-lg mb-5">
@@ -667,11 +694,11 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           6. SIMPLE 3 STEPS PROCESS (Ribbon Cards)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-24 sm:py-32 bg-[#F7F9FC] overflow-hidden">
+      <section aria-labelledby="process-heading" className="py-24 sm:py-32 bg-[#F7F9FC] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel arabic="مراحل العمل">Our Services</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3">
+            <h2 id="process-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3">
               Simple 3 Steps Process
             </h2>
             <div className="text-[#D96B27] font-arabic font-bold text-base sm:text-lg mb-5">
@@ -730,7 +757,7 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           7. TESTIMONIALS SECTION (High-Contrast Luxury Dark Backdrop with White Floating Cards)
          ───────────────────────────────────────────────────────────── */}
-      <section className="relative py-28 sm:py-36 overflow-hidden bg-[#123B6D] border-y border-white/10">
+      <section aria-labelledby="testimonials-heading" className="relative py-28 sm:py-36 overflow-hidden bg-[#123B6D] border-y border-white/10">
         {/* Background Image with High-Contrast Dark Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -748,7 +775,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
             <SectionLabel isDark={true} variant="minimal" arabic="آراء العملاء">CLIENT REVIEWS</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-3 drop-shadow-lg">
+            <h2 id="testimonials-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-3 drop-shadow-lg">
               Our Clients Love Us
             </h2>
             <div className="text-[#F7F9FC] font-arabic font-bold text-base sm:text-lg">
@@ -820,11 +847,11 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           8. OTHER TECHNICAL & PROPERTY SERVICES (8 Grid)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-24 sm:py-32 bg-[#F7F9FC] overflow-hidden">
+      <section aria-labelledby="other-services-heading" className="py-24 sm:py-32 bg-[#F7F9FC] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel arabic="خدماتنا الفنية الأخرى">Our Other Services</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3">
+            <h2 id="other-services-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3">
               Our Results Speak for Our Quality
             </h2>
             <div className="text-[#D96B27] font-arabic font-bold text-base sm:text-lg mb-5">
@@ -892,11 +919,11 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           9. DEDICATED ONLINE BOOKING SECTION (Full Form)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-24 sm:py-32 bg-[#F7F9FC] border-y border-[#E5E7EB] relative overflow-hidden">
+      <section aria-labelledby="booking-heading" className="py-24 sm:py-32 bg-[#F7F9FC] border-y border-[#E5E7EB] relative overflow-hidden">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <SectionLabel arabic="الحجز الإلكتروني">Online Booking</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3 text-[#111827]">
+            <h2 id="booking-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black mb-3 text-[#111827]">
               Book Marble &amp; Stone Restoration Service
             </h2>
             <div className="text-[#D96B27] font-arabic font-bold text-base sm:text-lg">
@@ -913,11 +940,11 @@ export default function HomePage() {
       {/* ─────────────────────────────────────────────────────────────
           10. LATEST BLOG / ARTICLES (3 Column Grid)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-24 sm:py-32 bg-[#F7F9FC] overflow-hidden">
+      <section aria-labelledby="blog-heading" className="py-24 sm:py-32 bg-[#F7F9FC] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <SectionLabel arabic="المدونة">Blog</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3">
+            <h2 id="blog-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] mb-3">
               Latest Stone Care Insights &amp; Advice
             </h2>
             <div className="text-[#D96B27] font-arabic font-bold text-base sm:text-lg mb-5">

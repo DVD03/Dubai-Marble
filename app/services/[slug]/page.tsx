@@ -113,11 +113,11 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <div className="absolute inset-0 bg-[#111827]/90 flex flex-col justify-end p-6">
                   <h3 className="font-black text-white text-base mb-1">Need Immediate Advice?</h3>
                   <p className="text-xs text-[#D0D5DD] mb-4">Speak directly with our senior stone technician.</p>
-                  <a href="tel:+971508164087"
+                  <a href="tel:+971522774953"
                     className="bg-[#123B6D] hover:bg-[#0000CC] text-white font-bold text-xs py-3 rounded-lg shadow-sm w-full flex items-center justify-center gap-2 mb-2 transition-colors">
-                    <Phone className="w-3.5 h-3.5" /> +971 50 816 4087
+                    <Phone className="w-3.5 h-3.5" /> +971 52 277 4953
                   </a>
-                  <a href="https://api.whatsapp.com/send?phone=971508164087" target="_blank" rel="noopener noreferrer"
+                  <a href="https://api.whatsapp.com/send?phone=971522774953" target="_blank" rel="noopener noreferrer"
                     className="border border-white/20 text-white text-xs py-3 rounded-xl w-full flex items-center justify-center gap-2 hover:border-[#25D366] transition-colors">
                     <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" /> WhatsApp | واتساب
                   </a>
