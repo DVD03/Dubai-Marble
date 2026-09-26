@@ -80,7 +80,7 @@ export default function BookingForm({ isDark = false, mode = "hero" }: BookingFo
                     <label className={labelCls}>
                       Phone Number <span className="text-[#6B7280] font-arabic font-normal">رقم الهاتف</span> *
                     </label>
-                    <input type="tel" required placeholder="+971 52 277 4953" className={fieldCls} />
+                    <input type="tel" required placeholder="+971 56 188 7300" className={fieldCls} />
                   </div>
                 </div>
 
@@ -133,7 +133,7 @@ export default function BookingForm({ isDark = false, mode = "hero" }: BookingFo
                     <label className={labelCls}>
                       Phone Number <span className="text-[#6B7280] font-arabic font-normal">رقم الهاتف</span> *
                     </label>
-                    <input type="tel" required placeholder="+971 52 277 4953" className={fieldCls} />
+                    <input type="tel" required placeholder="+971 56 188 7300" className={fieldCls} />
                   </div>
                   <div>
                     <label className={labelCls}>

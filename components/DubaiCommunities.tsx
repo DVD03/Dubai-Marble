@@ -67,10 +67,10 @@ export default function DubaiCommunities() {
             </div>
           </div>
           <a
-            href="tel:+971522774953"
+            href="tel:+971561887300"
             className="bg-[#123B6D] hover:bg-[#0000CC] text-white font-bold text-xs px-6 py-3 rounded-lg shadow-sm transition-colors shrink-0"
           >
-            Call Dispatch: +971 52 277 4953
+            Call Dispatch: +971 56 188 7300
           </a>
         </div>
       </div>

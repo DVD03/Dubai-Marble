@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "Dubai Marble Polishing | Professional Stone Restoration & Cleaning Services | GridsPro International",
     template: "%s | Dubai Marble Polishing"
   },
-  description: "Expert marble polishing, restoration, grinding, sealing & cleaning services in Dubai. 16+ years experience, 5-star hotel quality, free inspection. Serving all Dubai areas including Marina, Downtown, Palm Jumeirah. Call +971 52 277 4953.",
+  description: "Expert marble polishing, restoration, grinding, sealing & cleaning services in Dubai. 16+ years experience, 5-star hotel quality, free inspection. Serving all Dubai areas including Marina, Downtown, Palm Jumeirah. Call +971 56 188 7300.",
   keywords: [
     "Dubai marble polishing",
     "marble restoration Dubai",
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dubai Marble Polishing | Professional Stone Restoration & Cleaning Services",
-    description: "Expert marble polishing and restoration services in Dubai. 16+ years experience, 5-star hotel quality. Call +971 52 277 4953.",
+    description: "Expert marble polishing and restoration services in Dubai. 16+ years experience, 5-star hotel quality. Call +971 56 188 7300.",
     images: ["/images/luxury_lobby_marble.jpg"],
     creator: "@GridsProIntl",
   },

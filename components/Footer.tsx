@@ -109,7 +109,7 @@ export default function Footer() {
             </div>
             
             <a
-              href="tel:+971522774953"
+              href="tel:+971561887300"
               className="p-3.5 bg-[#0000CC] rounded-xl border border-white/15 flex items-center gap-3 hover:border-[#D96B27]/50 transition-colors shadow-lg block"
             >
               <div className="w-9 h-9 rounded-lg bg-[#D96B27] flex items-center justify-center text-white font-bold shrink-0 shadow">
@@ -120,7 +120,7 @@ export default function Footer() {
                   <span>Direct Hotline</span>
                   <span className="font-arabic text-[9px] text-[#98A2B3]">· الخط الساخن</span>
                 </div>
-                <div className="text-white font-black text-sm sm:text-base">+971 52 277 4953</div>
+                <div className="text-white font-black text-sm sm:text-base">+971 56 188 7300</div>
               </div>
             </a>
           </div>

@@ -222,11 +222,11 @@ export default function Navbar() {
           {/* DESKTOP CALL & BOOKING CTAs (Single-Line, No Line-Break) */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <a
-              href="tel:+971522774953"
+              href="tel:+971561887300"
               className="whitespace-nowrap flex items-center gap-2 text-xs font-bold text-white bg-[#D96B27] hover:bg-[#B8521A] px-3.5 py-2.5 rounded-xl border border-[#D96B27]/20 transition-colors shadow-sm"
             >
               <Phone className="w-3.5 h-3.5 text-white/90 shrink-0" />
-              <span>+971 52 277 4953</span>
+              <span>+971 56 188 7300</span>
             </a>
 
             <Link
@@ -379,13 +379,13 @@ export default function Navbar() {
                 {/* Mobile Action Buttons */}
                 <div className="pt-4 mt-2 border-t border-[#E5E7EB] flex flex-col gap-2.5">
                   <a
-                    href="tel:+971522774953"
+                    href="tel:+971561887300"
                     className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-[#D96B27]/20 text-white font-bold text-sm bg-[#D96B27] shadow hover:bg-[#B8521A]"
                   >
-                    <Phone className="w-4 h-4 text-white" /> Call Hotline: +971 52 277 4953
+                    <Phone className="w-4 h-4 text-white" /> Call Hotline: +971 56 188 7300
                   </a>
                   <a
-                    href="https://api.whatsapp.com/send?phone=971522774953&text=Hi%2C%20I%20need%20marble%20polishing%20in%20Dubai."
+                    href="https://api.whatsapp.com/send?phone=971561887300&text=Hi%2C%20I%20need%20marble%20polishing%20in%20Dubai."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 py-3.5 rounded-xl border border-emerald-600/40 text-white font-bold text-sm bg-emerald-950/60 shadow"

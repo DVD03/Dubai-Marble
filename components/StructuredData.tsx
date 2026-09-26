@@ -8,7 +8,7 @@ const StructuredData = () => {
     "alternateName": "Dubai Marble Polishing",
     "description": "Professional marble polishing, restoration, grinding, sealing & cleaning services in Dubai. 16+ years experience, 5-star hotel quality, free inspection.",
     "url": "https://dubaimarblepolishing.ae",
-    "telephone": "+971522774953",
+    "telephone": "+971561887300",
     "email": "info@dubaimarblepolishing.ae",
     "address": {
       "@type": "PostalAddress",

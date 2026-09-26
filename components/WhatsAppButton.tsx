@@ -39,7 +39,7 @@ export default function WhatsAppButton() {
       {/* Clean WhatsApp Button */}
       <div className="relative">
         <a
-          href="https://api.whatsapp.com/send?phone=971522774953&text=Hi%2C%20I%20need%20marble%20polishing%20in%20Dubai."
+          href="https://api.whatsapp.com/send?phone=971561887300&text=Hi%2C%20I%20need%20marble%20polishing%20in%20Dubai."
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"

@@ -35,7 +35,7 @@ export default function ContactPage() {
 
             <div className="flex flex-col gap-5 mb-8">
               {[
-                { icon: <Phone className="w-5 h-5 text-[#123B6D]" />,   label: "Phone / WhatsApp", ar: "الهاتف والواتساب", value: "+971 52 277 4953", href: "tel:+971522774953" },
+                { icon: <Phone className="w-5 h-5 text-[#123B6D]" />,   label: "Phone / WhatsApp", ar: "الهاتف والواتساب", value: "+971 56 188 7300", href: "tel:+971561887300" },
                 { icon: <MapPin className="w-5 h-5 text-[#123B6D]" />,  label: "Office Address",   ar: "عنوان المكتب",    value: "Villa 34, Street 27 B, Al Quoz 1, Dubai", href: null },
                 { icon: <Mail className="w-5 h-5 text-[#123B6D]" />,    label: "Email Address",    ar: "البريد الإلكتروني", value: "info@dubaimarblepolishing.ae", href: "mailto:info@dubaimarblepolishing.ae" },
                 { icon: <Clock className="w-5 h-5 text-[#123B6D]" />,   label: "Working Hours",    ar: "ساعات العمل",     value: "Mon – Sun: 9:00 AM – 6:00 PM", href: null },

@@ -127,7 +127,7 @@ export default function HomePage() {
       "provider": {
         "@type": "LocalBusiness",
         "name": "GridsPro International - Dubai Marble Polishing",
-        "telephone": "+971522774953",
+        "telephone": "+971561887300",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dubai",
@@ -179,11 +179,11 @@ export default function HomePage() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-black leading-[1.15] mb-6 text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
                 <span className="text-[#60A5FA] underline decoration-[#D96B27] decoration-5 underline-offset-4">
-                  GridPro &amp; Marble Polishing
+                  GridPro Marble Polishing
                 </span>
                 <br />
                 <span className="text-2xl sm:text-3xl lg:text-[28px] font-bold text-white mt-3 block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-                  Professional Marble Polishing &amp; Cleaning Services in Dubai
+                  Professional Stone Restoration &amp; Cleaning Marble Maintenance
                 </span>
                 <span className="text-xl sm:text-2xl font-bold text-[#F7F9FC] font-arabic mt-2 block leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                   خدمات تلميع وصيانة الرخام في دبي للفنادق 5 نجوم والممتلكات الخاصة والعامة
@@ -202,10 +202,10 @@ export default function HomePage() {
                   Our Services · خدماتنا <ArrowRight className="w-5 h-5" />
                 </Link>
                 <a
-                  href="tel:+971522774953"
+                  href="tel:+971561887300"
                   className="bg-[#D96B27] hover:bg-[#B8521A] border border-white/30 text-white px-7 py-4 rounded-xl font-bold text-base transition-all flex items-center gap-2 shadow-lg backdrop-blur-sm hover:scale-105"
                 >
-                  <Phone className="w-5 h-5 text-white" /> +971 52 277 4953
+                  <Phone className="w-5 h-5 text-white" /> +971 56 188 7300
                 </a>
               </div>
 
@@ -512,10 +512,10 @@ export default function HomePage() {
                 Schedule a Booking · احجز الآن
               </Link>
               <a
-                href="tel:+971522774953"
+                href="tel:+971561887300"
                 className="bg-[#F7F9FC] hover:bg-[#F7F9FC] text-[#111827] font-bold text-sm px-7 py-4 rounded-2xl transition-all flex items-center gap-3 border border-[#E5E7EB] shadow-md"
               >
-                <Phone className="w-4 h-4 text-[#D96B27]" /> +971 52 277 4953
+                <Phone className="w-4 h-4 text-[#D96B27]" /> +971 56 188 7300
               </a>
             </div>
           </div>
@@ -614,10 +614,10 @@ export default function HomePage() {
               Schedule a Booking · احجز الآن
             </Link>
             <a
-              href="tel:+971522774953"
+              href="tel:+971561887300"
               className="bg-white border border-[#E5E7EB] text-[#111827] hover:border-[#D96B27] px-8 py-4 rounded-2xl font-bold text-base transition-all flex items-center gap-3 shadow-md hover:shadow-lg"
             >
-              <Phone className="w-5 h-5 text-[#D96B27]" /> +971 52 277 4953
+              <Phone className="w-5 h-5 text-[#D96B27]" /> +971 56 188 7300
             </a>
           </div>
         </div>
@@ -677,10 +677,10 @@ export default function HomePage() {
               View All Projects · كافة المشاريع
             </Link>
             <a
-              href="tel:+971522774953"
+              href="tel:+971561887300"
               className="bg-[#F7F9FC] border border-[#E5E7EB] text-[#111827] hover:border-[#D96B27] px-8 py-4 rounded-2xl font-bold text-base transition-all flex items-center gap-3 shadow-md hover:shadow-lg"
             >
-              <Phone className="w-5 h-5 text-[#D96B27]" /> +971 52 277 4953
+              <Phone className="w-5 h-5 text-[#D96B27]" /> +971 56 188 7300
             </a>
           </div>
         </div>
@@ -907,10 +907,10 @@ export default function HomePage() {
               Schedule a Booking · احجز الآن
             </Link>
             <a
-              href="tel:+971522774953"
+              href="tel:+971561887300"
               className="bg-white border border-[#E5E7EB] text-[#111827] hover:border-[#D96B27] px-8 py-4 rounded-2xl font-bold text-base transition-all flex items-center gap-3 shadow-md hover:shadow-lg"
             >
-              <Phone className="w-5 h-5 text-[#D96B27]" /> +971 52 277 4953
+              <Phone className="w-5 h-5 text-[#D96B27]" /> +971 56 188 7300
             </a>
           </div>
         </div>
